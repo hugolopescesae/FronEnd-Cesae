@@ -18,7 +18,10 @@ public class ex_11 {
         System.out.println("Pretende creditar ou debitar? ");
         movimento= input.next();
 
-        // Calculo da operaca
+        // Calculo do movimento
+        if (movimento.equals("creditar")){
+            
+        }
 
     }
 }
