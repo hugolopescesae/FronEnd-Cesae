@@ -32,9 +32,7 @@ public class ex_09 {
                     if (num1==num2 && num2==num3){
                         System.out.println("Os números são todos iguais!");
                     }else{
-                        if (num1==num2 || num2==num3 || num1==num3){
                             System.out.println("Existem dois número iguais!");
-                        }
                     }
                 }
             }
