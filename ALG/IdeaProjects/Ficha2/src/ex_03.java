@@ -19,10 +19,10 @@ public class ex_03 {
         if (salario<=15000){
             System.out.println("O valor de impostos a pagar sobre o seu salário é: "+(salario*0.20));
         }else{
-            if (salario>=15001 && salario<=20000){
+            if (salario<=20000){
                 System.out.println("O valor de impostos a pagar sobre o seu salário é: "+(salario*0.30));
             }else{
-                if (salario>=20001 && salario<=25000){
+                if (salario<=25000){
                     System.out.println("O valor de impostos a pagar sobre o seu salário é: "+(salario*0.35));
                 }else{
                     if (salario>25000){
