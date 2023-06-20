@@ -16,22 +16,6 @@ public class ex_16 {
         euros= input.nextInt();
 
         // Calcular notas
-        if (euros>=200){
-            nota200 = euros/200;
-            euros = euros - (nota200*200);
-            System.out.println(+euros);
-        }else if (nota200 % euros > 0){
-            nota100 = euros/100;
-            euros = euros - (nota100*100);
-            System.out.println(+euros);
-        }else if (euros % nota100 != 1){
-            nota50 = euros/50;
-            euros = euros - (nota20*50);
-            System.out.println(+euros);
-        }else if (euros % nota50 != 1){
-
-        }
-
 
     }
 }
