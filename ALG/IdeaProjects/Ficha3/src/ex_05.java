@@ -8,15 +8,14 @@ public class ex_05 {
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável
-        int num, soma;
+        int num = 1, var = 0;
 
         // Apresentar números até 100
-        for (num = 0;num<=100;num++){
+        while (num<=100){
             System.out.println(num);
+            num = num + 1;
+            var = var + num;
         }
-
-        // Soma dos números até 100
-
-
+        System.out.println(var);
     }
 }

@@ -8,14 +8,12 @@ public class ex_02 {
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável
-        int num;
+        int num = 531;
 
         // Apresentar os números pares até o número 300
-        for (num = 350;num<=750;num++){
-            if (num % 2 == 1){
-                System.out.println(num);
-                num = num +1;
-            }
+        while (num<=750){
+            System.out.println(num);
+            num = num + 2;
         }
     }
 }
