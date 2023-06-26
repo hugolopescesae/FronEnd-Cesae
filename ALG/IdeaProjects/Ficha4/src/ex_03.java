@@ -14,7 +14,6 @@ public class ex_03 {
         System.out.print("Jogador 1, introduza um número de 0 a 100: ");
         num1 = input.nextInt();
 
-
         // Ler tentativas do jogador 2
         if (num1 > 0 && num1 < 100){
             System.out.println("Jogador 2, tente advinhar o número escolhido pelo jogador 1:");
