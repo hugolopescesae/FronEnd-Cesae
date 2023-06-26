@@ -1,0 +1,31 @@
+/*CSS Geral*/
+header, footer {
+    text-align: center;
+}
+
+header img {
+    width: 70%;
+    max-width: 600px;
+    min-width: 400px;
+}
+
+footer img {
+    width: 70%;
+    max-width: 50px;
+    min-width: 50px;
+}
+
+footer {
+    color: blue;
+}
+
+/*CSS Página Index*/
+.center img{
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*CSS Página About*/
+
