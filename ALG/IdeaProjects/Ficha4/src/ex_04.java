@@ -22,9 +22,9 @@ public class ex_04 {
                 System.out.println("O número introduzido ("+num+") é primo!");
             }
         }else if (num == 1){
-            System.out.println("O número introduzido ("+num+")é não primo primo!");
+            System.out.println("O número introduzido ("+num+") é não primo primo!");
         }else{
-            System.out.println("O número introduzido ("+num+")é primo!");
+            System.out.println("O número introduzido ("+num+") é primo!");
         }
     }
 }
