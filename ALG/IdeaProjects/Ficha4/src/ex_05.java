@@ -1,4 +1,3 @@
-import java.util.IllegalFormatCodePointException;
 import java.util.Scanner;
 
 public class ex_05 {
