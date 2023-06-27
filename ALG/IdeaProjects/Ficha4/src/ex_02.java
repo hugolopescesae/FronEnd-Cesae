@@ -13,6 +13,7 @@ public class ex_02 {
         // Apresentar menu
         do {
             do {
+                System.out.println("Menu - Escolha uma das opções: ");
                 System.out.println("1 - Criar");
                 System.out.println("2 - Atualizar");
                 System.out.println("3 - Eliminar");
