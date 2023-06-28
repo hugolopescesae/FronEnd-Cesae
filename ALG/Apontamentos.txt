@@ -1,0 +1,4 @@
+https://hackr.io/blog/java-cheat-sheet
+https://introcs.cs.princeton.edu/java/home/
+https://www.codecademy.com/resources/cheatsheets/language/java
+
