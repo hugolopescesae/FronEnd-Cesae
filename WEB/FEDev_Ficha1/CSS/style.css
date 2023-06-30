@@ -1,5 +1,6 @@
 /*CSS Geral*/
-header, footer {
+header,
+footer {
     text-align: center;
 }
 
@@ -19,13 +20,52 @@ footer {
     color: blue;
 }
 
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav_text {
+    text-decoration: none;
+    color: black;
+}
+
 /*CSS Página Index*/
-.center img{
+.cubes img {
     display: block;
     width: 80%;
     height: 80%;
     margin-left: auto;
     margin-right: auto;
 }
-/*CSS Página About*/
 
+/*CSS Página About*/
+.aboutbody {
+    padding: 15px;
+    word-spacing: 0.5;
+    line-height: 1.2;
+}
+
+.links {
+    text-decoration: none;
+    color: dodgerblue;
+}
+
+/*CSS Página FrontEnd */
+table,
+th,
+td {
+    border: solid 1px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+}
+
+table {
+    width: 75%;
+}
+
+th {
+    background-color: burlywood;
+}
