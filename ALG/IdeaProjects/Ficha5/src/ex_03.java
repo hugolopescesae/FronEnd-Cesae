@@ -7,19 +7,18 @@ public class ex_03 {
 
         Scanner input = new Scanner(System.in);
 
-        // Declarar Array
+        // Declarar Array e Variável
         int[] num = new int[10];
+        int aux = 0, maior = 0;
 
         // Declarar Variável
-        int i = 1, aux = 1, aux2 = 0;
-
-        while (i<=10){
-            System.out.print("Introduza o preço do produto "+(aux++)+" : ");
-            num[0] = input.nextInt();
-            i++;
-            num[0]++;
-            aux2 = aux2 + num[0];
+        for (int i = 0;i < num.length;i++){
+            System.out.print("Introduza o número "+(i+1)+": ");
+            num[i] = input.nextInt();
+            if (num[i]>=(num[i]+1)){
+                maior = num[i];
+            }
         }
-        System.out.println(aux2+"€");
+        System.out.print("O maior elemento é : "+maior);
     }
 }

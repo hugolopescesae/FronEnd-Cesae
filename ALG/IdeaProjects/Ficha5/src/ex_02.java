@@ -7,19 +7,16 @@ public class ex_02 {
 
         Scanner input = new Scanner(System.in);
 
-        // Declarar Array
+        // Declarar Array e Variável
         int[] num = new int[10];
+        int aux = 0;
 
-        // Declarar Variável
-        int i = 1, aux = 1, aux2 = 0;
-
-        while (i<=10){
-            System.out.print("Introduza o preço do produto "+(aux++)+" : ");
-            num[0] = input.nextInt();
-            num[0]++;
-            aux2 = aux2 + num[0];
-            i++;
+        // Printar total do preço dos produtos
+        for (int i = 0;i < num.length;i++){
+            System.out.print("Introduza o preço do produto "+(i+1)+": ");
+            num[i] = input.nextInt();
+            aux = aux + num[i];
         }
-        System.out.println("O preço total dos produtos é: "+aux2+"€");
+        System.out.print("A soma dos números é: "+aux);
     }
 }
