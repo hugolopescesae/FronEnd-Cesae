@@ -123,7 +123,7 @@ airplaneSeats[3][1] = "Hugo";
 console.log(airplaneSeats)
 
 //1
-let product = { name:"Hugo", inStock:true, price:1.99, color: ["Vermelho", "Azul", "Verde"]}
+const product = { name:"camisola", inStock:true, price:1.99, color: ["Vermelho", "Azul", "Verde"]}
 
 //2
 console.log(product.price)
@@ -152,27 +152,45 @@ const people = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred"];
 
 //2
 for(let i = 0;i < people.length;i++){
-    console.log(i, people[i])
+    console.log(i, people[i].toUpperCase())
 }
 
 
-let i = 0;
-let lista = [i];
-let codigo = 0;
+let lista = [];
+let item = "";
+let end = "fim"
 
-while (lista.length < 100){
-    lista [i] = prompt("Introduza a tarefa "+(i+1));
-    codigo = lista [i];
-    i++;
-    if (codigo == 0){
-        break;
+while (item != "fim") {
+    item = prompt("Digite um valor para adicionar a lista: ");
+    lista.push(item);
+
+    if (item != end) {
+        lista.push(item);
     }
 }
-console.log(lista);
+
+for(element of lista){
+    console.log(element)
+}
 
 
 function printHeart(){
     alert("<3");
 }
-*/
 
+
+function rant(message) {
+    for (i = 0; i < 3;i++){
+        console.log(message.toUpperCase());
+    }
+}
+
+
+function isSnakeEyes(num1, num2) {
+    if (num1 == num2){
+        console.log("Yay, snake eyes")
+    }else{
+        console.log("Não sao olhos de cobra")
+    }
+}
+*/
