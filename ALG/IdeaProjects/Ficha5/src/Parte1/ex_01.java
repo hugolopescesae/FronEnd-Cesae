@@ -1,3 +1,5 @@
+package Parte1;
+
 import java.util.Scanner;
 
 public class ex_01 {
@@ -10,11 +12,15 @@ public class ex_01 {
         // Declarar Array
         int[] num = new int[10];
 
-        // Printar os números pela ordem de inserção
+        // Pedir números
         for (int i = 0;i < num.length;i++){
             System.out.print("Introduza o número "+(i+1)+": ");
             num[i] =input.nextInt();
         }
-        System.out.print("A ordem de inserção é: "+num[0]+","+num[1]+","+num[2]+","+num[3]+","+num[4]+","+num[5]+","+num[6]+","+num[7]+","+num[8]+","+num[9]);
+
+        // Printar por ordem de inserção
+        for (int i = 0;i< num.length;i++){
+            System.out.println("num["+i+"] é: "+num[i]);
+        }
     }
 }

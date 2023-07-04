@@ -1,3 +1,5 @@
+package Parte1;
+
 import java.util.Scanner;
 
 public class ex_03 {
@@ -9,16 +11,21 @@ public class ex_03 {
 
         // Declarar Array e Variável
         int[] num = new int[10];
-        int aux = 0, maior = 0;
+        int maior;
 
-        // Declarar Variável
+        // Pedir números ao utilizador
         for (int i = 0;i < num.length;i++){
             System.out.print("Introduza o número "+(i+1)+": ");
             num[i] = input.nextInt();
-            if (num[i]>=(num[i]+1)){
-                maior = num[i];
+        }
+        maior=num[0];
+
+        // Apresentar o maior elemento
+        for (int i = 0;i < num.length;i++){
+            if (num[i]>maior){
+                maior=num[i];
             }
         }
-        System.out.print("O maior elemento é : "+maior);
+        System.out.println("O maior elemento é o: "+maior);
     }
 }

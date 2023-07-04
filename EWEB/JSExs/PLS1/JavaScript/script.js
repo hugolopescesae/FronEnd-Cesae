@@ -46,28 +46,30 @@ function sumArray(array) {
 }
 
 6 -------------
-function returnDay(day) {
-    switch(day){
-        case 1: return ("Segunda");
-        case 2: return ("Terça");
-        case 3: return ("Quarta");
-        case 4: return ("Quinta");
-        case 5: return ("Sexta");
-        case 6: return ("Sábado");
-        case 7: return ("Domingo");
+function returnDay(day){
+    array = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"] 
+    switch (day){
+        case 1: return (array[0]);
+        case 2: return (array[1]);
+        case 3: return (array[2]);
+        case 4: return (array[3]);
+        case 5: return (array[4]);
+        case 6: return (array[5]);
+        case 7: return (array[6]);
         default: return null;
     }
 }
 function calculator(num1, num2, operacao) {
-    if (operacao === "soma"){
-        return (num1+num2);
-    }else if(operacao === "subtração"){
-        return (num1-num2);
-    }else if(operacao === "multiplicação"){
-        return (num1*num2);
-    }else if(operacao === "divisão"){
-        return (num1/num2);
-    }else{
-        return ("Introduza uma operação válida!")
+    switch (operacao){
+        case "soma": return (num1+num2);
+        break;
+        case "subtração": return (num1-num2);
+        break;
+        case "multiplicação": return (num1*num2);
+        break;
+        case "divisão": return (num1/num2);
+        break;
+        default: return ("Introduza uma operação válida!");
+        break;
     }
 }*/
