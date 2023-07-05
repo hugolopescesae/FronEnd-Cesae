@@ -193,4 +193,45 @@ function isSnakeEyes(num1, num2) {
         console.log("Não sao olhos de cobra")
     }
 }
+
+const fullNames = [
+    {first: "Albus", last: "Dumbledore"},
+    {first: "Harry", last: "Potter"}, 
+    {first: "Hermione", last: "Granger"}, 
+    {first: "Ron", last: "Weasley"}, 
+    {first: "Rubeus", last: "Hagrid"}, 
+    {first: "Minerva", last: "McGonagall"}, 
+    {first: "Severus", last: "Snape"}
+];
+
+const firstNames = fullNames.map(
+    function (firstNames) {
+    return firstNames.first;
+    }
+)
+
+
+const greet = (text) => {
+    return text;
+}
+
+
+function validUserNames(usernames) {
+    const valid = usernames.filter(
+        element => element.length < 10
+    )
+    return valid;
+}
 */
+
+/* function allEvens(numeros) {
+    const pares = numeros.every(
+        element => element % 2 == 0
+    )
+    return pares;
+} */
+
+/* function allEvens2(array) {
+    return array.every(element => typeof element === 'number' && element % 2 === 0) && array.length > 0;
+} */
+
