@@ -12,7 +12,7 @@ public class ex_08 {
         // Declara Matriz
         int[][] num = new int[3][3];
 
-        // Pedir números ao utilizador
+        // Pedir números ao utilizador e printar números
         for (int i = 0;i < num.length;i++){
             for (int c = 0;c < num[0].length;c++){
                 System.out.print("Linha "+(i)+", Coluna "+(c)+": ");
@@ -23,9 +23,9 @@ public class ex_08 {
         for (int i = 0;i < num.length;i++) {
             for (int c = 0; c < num[0].length; c++) {
                 System.out.print(num[i][c]);
-                System.out.print(" ");
+                System.out.print("\t");
             }
-            System.out.println(" ");
+            System.out.println("");
         }
     }
 }
