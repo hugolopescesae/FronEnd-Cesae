@@ -8,20 +8,20 @@ public class ex_04 {
      * @return
      */
     static boolean primo(int num){
-        if (num <=1){
+        if (num <=1) {
             return false;
-        }else{
-            for (int i = 2;i < num;i++){
-                if (num % i ==0){
-                    return false;
-                }
-            }
-            return true;
         }
+        for (int i = 2;i < num;i++){
+            if (num % i == 0){
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
 
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável

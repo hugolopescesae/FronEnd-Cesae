@@ -19,15 +19,12 @@ public class ex_10 {
 
     public static void main(String[] args) {
 
-        // Instanciar Scanner
+        // Scanner
         Scanner input = new Scanner(System.in);
-
-        // Declarar Variável
-        int counter;
 
         // Ler números do utilizador
         System.out.print("Introduza quantos número quer inserir no array: ");
-        counter = input.nextInt();
+        int counter = input.nextInt();
         int [] array = new int[counter];
 
         // Ler número para o array

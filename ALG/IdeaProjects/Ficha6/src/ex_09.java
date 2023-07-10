@@ -14,15 +14,12 @@ public class ex_09 {
 
     public static void main(String[] args) {
 
-        // Instanciar Scanner
+        // Scanner
         Scanner input = new Scanner(System.in);
-
-        // Declarar Variável
-        int counter;
 
         // Ler counter do utilizador
         System.out.print("Introduza a quantidade de números que quer inserir no array: ");
-        counter = input.nextInt();
+        int counter = input.nextInt();
         int[] array = new int[counter];
 
         // Ler números para o array

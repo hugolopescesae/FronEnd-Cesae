@@ -22,6 +22,7 @@ public class ex_05 {
 
     public static void main(String[] args) {
 
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável

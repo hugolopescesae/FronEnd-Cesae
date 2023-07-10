@@ -8,7 +8,7 @@ public class ex_07 {
 
         // Ler números do utilizador
         for (int i = 0;i < array.length;i++){
-            System.out.print("Introduza o número "+i+" : ");
+            System.out.print("Introduza o número "+(i+1)+" : ");
             array[i] = input.nextInt();
         }
         return array;
@@ -17,19 +17,20 @@ public class ex_07 {
         for (int i = 0;i < array.length;i++){
             System.out.print("[");
             for (int j = 0;i < array.length;i++){
-                System.out.print(" "+array[j]+" ");
+                System.out.print(" "+array[i]+" ");
             }
             System.out.print("]");
         }
     }
-
     public static void main(String[] args) {
-        // Instanciar Scanner
+        // Scanner
         Scanner input = new Scanner(System.in);
 
+        // Declarar Variável
+        int counter;
         // Ler counter do utilizador
         System.out.print("Quantos número quer introduzir: ");
-        int counter = input.nextInt();
+        counter = input.nextInt();
         int [] array = new int[counter];
 
         array = preencherArray(array);

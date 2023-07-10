@@ -2,31 +2,6 @@ import java.util.Scanner;
 
 public class ex_06 {
 
-    // A função imprime o barulho de um animal!
-    static void fazerBarulho(String animal){
-
-        switch (animal){
-            case "CAO":
-                System.out.println("Au au au");
-                break;
-            case "GATO":
-                System.out.println("Miau");
-                break;
-            case "PEIXE":
-                System.out.println("Glub Glub");
-                break;
-            case "VACA":
-                System.out.println("Muuuu");
-                break;
-            case "PORCO":
-                System.out.println("Oinc oinc");
-                break;
-            default:
-                System.out.println("Barulho indefinido");
-                break;
-        }
-    }
-
     // A função imprime se o número é par ou não!
     static boolean numPar(int num){
         if (num % 2 == 0){
@@ -76,43 +51,42 @@ public class ex_06 {
     // A função imprime o menu
     static void menu(){
 
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável
         int opcao, num;
         String stop;
-        String barulhoEscolhido;
 
         // Apresentar menu
         do {
             do {
-                System.out.println("-------- MENU -------- \n 1 - Exercício animais \n 2 - Exercício Pares \n 3 - Exercício Positivos \n 4 - Exercício Primos \n 5 - Exercício Perfeitos \n Introduza o número correspondente a opção:");
+                System.out.println("-------- MENU -------- \n 1 - Exercício Pares \n 2 - Exercício Positivos \n 3 - Exercício Primos \n 4 - Exercício Perfeitos \n Introduza o número correspondente a opção:");
                 opcao = input.nextInt();
-            }while (opcao < 1 || opcao >6);
+            }while (opcao < 1 || opcao > 4);
             do {
                 switch (opcao){
                     case 1:
-                        System.out.println("Introduza o animal: ");
-                        barulhoEscolhido = input.next();
-                        fazerBarulho(barulhoEscolhido);
-                        break;
-                    case 2:
-                        System.out.println("Introduza um número: ");
+                        System.out.println("1 - Exercício Pares");
+                        System.out.print("Introduza um número: ");
                         num = input.nextInt();
                         System.out.println(numPar(num));
                         break;
-                    case 3:
-                        System.out.println("Introduza um número: ");
+                    case 2:
+                        System.out.println("2 - Exercício Positivos");
+                        System.out.print("Introduza um número: ");
                         num = input.nextInt();
                         System.out.println(positivo(num));
                         break;
-                    case 4:
-                        System.out.println("Introduza um número: ");
+                    case 3:
+                        System.out.println("3 - Exercício Primos");
+                        System.out.print("Introduza um número: ");
                         num = input.nextInt();
                         System.out.println(primo(num));
                         break;
-                    case 5:
-                        System.out.println("Introduza um número: ");
+                    case 4:
+                        System.out.println("4 - Exercício Perfeitos");
+                        System.out.print("Introduza um número: ");
                         num = input.nextInt();
                         System.out.println(perfeito(num));
                         break;

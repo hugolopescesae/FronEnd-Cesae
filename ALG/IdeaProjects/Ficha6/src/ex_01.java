@@ -7,7 +7,6 @@ public class ex_01 {
      * @param animal Animal que vai fazer barulho
      */
     static void fazerBarulho(String animal){
-
         switch (animal){
             case "CAO":
                 System.out.println("Au au au");
@@ -32,7 +31,7 @@ public class ex_01 {
 
     public static void main(String[] args) {
 
-        // Scanner Obrigatório da Consola
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Delcarar Variável
@@ -42,8 +41,6 @@ public class ex_01 {
         animalEscolhido = input.next();
 
         fazerBarulho(animalEscolhido);
-
-        System.out.println("\nFIM!");
 
     }
 }

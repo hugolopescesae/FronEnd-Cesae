@@ -2,26 +2,6 @@ import java.util.Scanner;
 
 public class ex_11 {
 
-    static int[] tamanhoArray(){
-        // Instanciar Scanner
-        Scanner input = new Scanner(System.in);
-
-        // Declarar Variável
-        int counter;
-
-        // Ler números do utilizador
-        System.out.print("Introduza quantos número quer inserir no array: ");
-        counter = input.nextInt();
-        int [] array = new int[counter];
-
-        // Ler número para o array
-        for (int i = 0;i < array.length;i++){
-            System.out.print("Introduza o número "+(i+1)+" : ");
-            array[i] = input.nextInt();
-        }
-        return array;
-    }
-
     static int maiorNumero(int[] array){
         int maior = array[0];
         for (int i = 0;i < array.length;i++){
@@ -56,33 +36,50 @@ public class ex_11 {
         }
     }
 
+    static int[] preencher(){
+
+        // Scanner
+        Scanner input = new Scanner(System.in);
+
+        // Tamanho do array
+        System.out.println("Quantos números quer inserir no array: ");
+        int counter = input.nextInt();
+
+        int[] array = new int[counter];
+
+        // Ler array do utilizador
+        for (int i = 0;i < counter;i++){
+            System.out.println("Introduza o número "+(i+1)+" : ");
+            array[i] = input.nextInt();
+        }
+        return array;
+    }
+
     static void menu(){
 
         // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável
-        int opcao, num;
+        int opcao;
         String stop;
 
-        int [] array = tamanhoArray();
-
-        // Apresentar menu
+        // Menu
         do {
             do {
-                System.out.println("-------- MENU -------- \n 8 - Exercício Maior Número \n 9 - Exercício Menor Número \n 10 - Exercício Crescente \n Introduza o número correspondente a opção:");
+                System.out.print("-------- MENU -------- \n8  - Exercício Maior Número \n9  - Exercício Menor Número \n10 - Exercício Primos \nIntroduza o número correspondente a opção: ");
                 opcao = input.nextInt();
-            }while (opcao < 8 || opcao >10);
+            }while (opcao < 8 || opcao > 10);
             do {
                 switch (opcao){
-                    case 1:
-                        System.out.println(maiorNumero(array));
+                    case 8:
+                        System.out.println(maiorNumero(preencher()));
                         break;
-                    case 2:
-                        System.out.println(menorNumero(array));
+                    case 9:
+                        System.out.println(menorNumero(preencher()));
                         break;
-                    case 3:
-                        System.out.println(crescente(array));
+                    case 10:
+                        System.out.println(crescente(preencher()));
                         break;
                 }
                 System.out.println("Pretende repetir o valor/opção introduzida?(s/n)");
@@ -92,7 +89,6 @@ public class ex_11 {
             stop = input.next();
         }while (stop.equals("s"));
     }
-
     public static void main(String[] args) {
         menu();
     }
