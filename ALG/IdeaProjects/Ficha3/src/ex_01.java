@@ -3,17 +3,14 @@ import java.util.Scanner;
 public class ex_01 {
     public static void main(String[] args) {
 
-        System.out.println("***** Exercício 01 *****");
-
+        // Scanner
         Scanner input = new Scanner(System.in);
 
-        // Declarar Variável
-        int num = 0;
-
-        // Apresentar os números pares até o número 300
-        while (num<=300){
-            System.out.println(num);
-            num = num +2;
+        // Printar números
+        for (int i = 1;i <= 300;i++){
+            if (i % 2 == 0){
+                System.out.println(i);
+            }
         }
     }
 }

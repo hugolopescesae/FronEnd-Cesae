@@ -3,15 +3,13 @@ import java.util.Scanner;
 public class ex_16 {
     public static void main(String[] args) {
 
-        System.out.println("***** Exercício 16 *****");
-
-        // Instanciar Scanner (Linha obrigatória para ler dados da consola)
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável
         int valor, notas;
 
-        // Ler valor em euros
+        // Ler valor
         System.out.print("Introduza um valor em euros (apenas múltiplos de 5): ");
         valor = input.nextInt();
 
@@ -40,7 +38,6 @@ public class ex_16 {
             notas = valor/5;
             System.out.println("Notas de 5: "+notas);
             valor = valor % 5;
-
         }else{
             System.out.println("O valor tem de ser múltiplo de 5!");
         }

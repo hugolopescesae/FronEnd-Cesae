@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class ex_02 {
     public static void main(String[] args) {
 
-        System.out.println("***** Exercício 02 *****");
-
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável
@@ -13,11 +12,7 @@ public class ex_02 {
         // Apresentar menu
         do {
             do {
-                System.out.println("Menu - Escolha uma das opções: ");
-                System.out.println("1 - Criar");
-                System.out.println("2 - Atualizar");
-                System.out.println("3 - Eliminar");
-                System.out.println("4 - Sair");
+                System.out.print("---- Menu ----\n1 - Criar \n2 - Atualizar \n3 - Eliminar \n4 - Sair \nEscolha uma opção: ");
                 num = input.nextInt();
             } while (num < 1 || num > 4);
             switch (num){

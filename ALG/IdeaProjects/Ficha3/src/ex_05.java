@@ -3,19 +3,19 @@ import java.util.Scanner;
 public class ex_05 {
     public static void main(String[] args) {
 
-        System.out.println("***** Exercício 05 *****");
-
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável
-        int num = 1, var = 0;
+        int aux = 0;
 
-        // Apresentar números até 100
-        while (num<=100){
-            System.out.println(num);
-            num = num + 1;
-            var = var + num;
+        // Apresentar os números
+        for (int i = 1;i <= 100;i++){
+            System.out.println(i);
+            aux += i;
         }
-        System.out.println(var);
+
+        // Apresentar somatório
+        System.out.println("A soma dos números é: "+aux);
     }
 }

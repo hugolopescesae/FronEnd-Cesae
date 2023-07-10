@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class ex_14 {
     public static void main(String[] args) {
 
-        System.out.println("***** Exercício 14 *****");
-
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Matriz
@@ -78,67 +77,67 @@ public class ex_14 {
                 } while (opcao < 1 || opcao > 6);
                 switch (opcao) {
                     case 1: // 1 - Valor ilíquido (Base + Bónus) a receber fruto do vencimento.
-                        for (int i = 0; i < mesValorIliquido.length; i++) {
-                            if (cargo.equals("empregado")) {
+                        for (int i = 0; i < mesValorIliquido.length; i++){
+                            if (cargo.equals("empregado")){
                                 salario = mesDiasTrabalho[i] * 40;
-                                if (mesDiasTrabalho[i] > 20) {
-                                    System.out.println("O valor ilíquido do mês " + (i + 1) + " será: " + (salario + (salario * 0.05)));
-                                } else if (mesDiasTrabalho[i] > 17) {
-                                    System.out.println("O valor ilíquido do mês " + (i + 1) + " será: " + (salario + (salario * 0.02)));
-                                } else {
-                                    System.out.println("O valor ilíquido do mês " + (i + 1) + " será: " + (salario));
+                                if (mesDiasTrabalho[i] > 20){
+                                    System.out.println("O valor ilíquido do mês "+(i+1)+" será: "+(salario+(salario*0.05)));
+                                }else if (mesDiasTrabalho[i] > 17){
+                                    System.out.println("O valor ilíquido do mês "+(i+1)+" será: "+(salario+(salario*0.02)));
+                                }else{
+                                    System.out.println("O valor ilíquido do mês "+(i+1)+" será: "+(salario));
                                 }
-                            } else if (cargo.equals("chefe")) {
+                            }else if (cargo.equals("chefe")){
                                 salario = mesDiasTrabalho[i] * 60;
-                                if (mesDiasTrabalho[i] > 20) {
-                                    System.out.println("O valor ilíquido do mês " + (i + 1) + " será: " + (salario + (salario * 0.05)));
-                                } else if (mesDiasTrabalho[i] > 17) {
-                                    System.out.println("O valor ilíquido do mês " + (i + 1) + " será: " + (salario + (salario * 0.02)));
-                                } else {
-                                    System.out.println("O valor ilíquido do mês " + (i + 1) + " será: " + (salario));
+                                if (mesDiasTrabalho[i] > 20){
+                                    System.out.println("O valor ilíquido do mês "+(i+1)+" será: "+(salario+(salario*0.05)));
+                                }else if (mesDiasTrabalho[i] > 17){
+                                    System.out.println("O valor ilíquido do mês "+(i+1)+" será: "+(salario+(salario*0.02)));
+                                }else{
+                                    System.out.println("O valor ilíquido do mês "+(i+1)+" será: "+(salario));
                                 }
-                            } else if (cargo.equals("administrador")) {
+                            }else if (cargo.equals("administrador")){
                                 salario = mesDiasTrabalho[i] * 80;
-                                if (mesDiasTrabalho[i] > 20) {
-                                    System.out.println("O valor ilíquido do mês " + (i + 1) + " será: " + (salario + (salario * 0.05)));
-                                } else if (mesDiasTrabalho[i] > 17) {
-                                    System.out.println("O valor ilíquido do mês " + (i + 1) + " será: " + (salario + (salario * 0.02)));
-                                } else {
-                                    System.out.println("O valor ilíquido do mês " + (i + 1) + " será: " + (salario));
+                                if (mesDiasTrabalho[i] > 20){
+                                    System.out.println("O valor ilíquido do mês "+(i+1)+" será: "+(salario+(salario*0.05)));
+                                }else if (mesDiasTrabalho[i] > 17){
+                                    System.out.println("O valor ilíquido do mês "+(i+1)+" será: "+(salario+(salario*0.02)));
+                                }else{
+                                    System.out.println("O valor ilíquido do mês "+(i+1)+" será: "+(salario));
                                 }
                             }
                         }
                         break;
                     case 2: // 2 - Total do Subsídio de alimentação.
-                        for (int i = 0; i < mesSubsidioAlimentacao.length; i++) {
-                            if (cargo.equals("empregado")) {
-                                System.out.println("O valor do Subsídio de alimentação no mês " + (i + 1) + " será: " + (mesDiasTrabalho[i] * 5));
-                            } else if (cargo.equals("chefe") || cargo.equals("administrador")) {
-                                System.out.println("O valor do Subsídio de alimentação no mês " + (i + 1) + " será: " + (mesDiasTrabalho[i] * 7.5));
+                        for (int i = 0; i < mesSubsidioAlimentacao.length; i++){
+                            if (cargo.equals("empregado")){
+                                System.out.println("O valor do Subsídio de alimentação no mês "+(i+1)+" será: "+(mesDiasTrabalho[i]*5));
+                            }else if (cargo.equals("chefe") || cargo.equals("administrador")){
+                                System.out.println("O valor do Subsídio de alimentação no mês "+(i+1)+" será: "+(mesDiasTrabalho[i]*7.5));
                             }
                         }
                         break;
                     case 3: // 3 - Valor da retenção de IRS a entregar ao estado.
-                        for (int i = 0; i < mesIRS.length; i++) {
-                            if (cargo.equals("empregado")) {
+                        for (int i = 0; i < mesIRS.length; i++){
+                            if (cargo.equals("empregado")){
                                 salario = (mesDiasTrabalho[i] * 40) + (mesDiasTrabalho[i] * 5);
-                                if (salario < 1000) {
-                                    System.out.println("O valor da retenção de IRS do mês " + (i + 1) + " será: " + (salario * 0.10));
-                                } else if (salario < 2500) {
-                                    System.out.println("O valor da retenção de IRS do mês " + (i + 1) + " será: " + (salario * 0.20));
-                                } else if (salario >= 2500) {
-                                    System.out.println("O valor da retenção de IRS do mês " + (i + 1) + " será: " + (salario * 0.30));
+                                if (salario < 1000){
+                                    System.out.println("O valor da retenção de IRS do mês "+(i + 1) + " será: " + (salario * 0.10));
+                                }else if (salario < 2500){
+                                    System.out.println("O valor da retenção de IRS do mês "+(i + 1) + " será: " + (salario * 0.20));
+                                }else if (salario >= 2500){
+                                    System.out.println("O valor da retenção de IRS do mês "+(i + 1) + " será: " + (salario * 0.30));
                                 }
-                            } else if (cargo.equals("chefe")) {
+                            }else if (cargo.equals("chefe")){
                                 salario = (mesDiasTrabalho[i] * 60) + (mesDiasTrabalho[i] * 7.5);
-                                if (salario < 1000) {
+                                if (salario < 1000){
                                     System.out.println("O valor da retenção de IRS do mês " + (i + 1) + " será: " + (salario * 0.10));
-                                } else if (salario < 2500) {
+                                }else if (salario < 2500){
                                     System.out.println("O valor da retenção de IRS do mês " + (i + 1) + " será: " + (salario * 0.20));
-                                } else if (salario >= 2500) {
+                                }else if (salario >= 2500){
                                     System.out.println("O valor da retenção de IRS do mês " + (i + 1) + " será: " + (salario * 0.30));
                                 }
-                            } else if (cargo.equals("administrador")) {
+                            }else if (cargo.equals("administrador")) {
                                 salario = (mesDiasTrabalho[i] * 80) + (mesDiasTrabalho[i] * 7.5);
                                 if (salario < 1000) {
                                     System.out.println("O valor da retenção de IRS do mês " + (i + 1) + " será: " + (salario * 0.10));
@@ -281,67 +280,67 @@ public class ex_14 {
                                     salario = (mesDiasTrabalho[i] * 40) + (mesDiasTrabalho[i] * 5);
                                     if (salario < 1000) {
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.6525)));
-                                    } else if (salario < 2500) {
+                                    }else if (salario < 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.6525)));
-                                    } else if (salario >= 2500) {
+                                    }else if (salario >= 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.6525)));
                                     }
                                 }
-                            } else if (cargo.equals("chefe")) {
-                                if (mesDiasTrabalho[i] > 20) {
+                            }else if (cargo.equals("chefe")){
+                                if (mesDiasTrabalho[i] > 20){
                                     salario = (mesDiasTrabalho[i] * 60) + (mesDiasTrabalho[i] * 7.5) + ((mesDiasTrabalho[i] * 60) * 0.05);
-                                    if (salario < 1000) {
+                                    if (salario < 1000){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.6525)));
-                                    } else if (salario < 2500) {
+                                    }else if (salario < 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.6525)));
-                                    } else if (salario >= 2500) {
+                                    }else if (salario >= 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.6525)));
                                     }
-                                } else if (mesDiasTrabalho[i] > 17) {
+                                }else if (mesDiasTrabalho[i] > 17){
                                     salario = (mesDiasTrabalho[i] * 60) + (mesDiasTrabalho[i] * 7.5) + ((mesDiasTrabalho[i] * 60) * 0.03);
-                                    if (salario < 1000) {
+                                    if (salario < 1000){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.6525)));
-                                    } else if (salario < 2500) {
+                                    }else if (salario < 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.6525)));
-                                    } else if (salario >= 2500) {
+                                    }else if (salario >= 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.6525)));
                                     }
-                                } else {
+                                }else{
                                     salario = (mesDiasTrabalho[i] * 60) + (mesDiasTrabalho[i] * 7.5);
-                                    if (salario < 1000) {
+                                    if (salario < 1000){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.6525)));
-                                    } else if (salario < 2500) {
+                                    }else if (salario < 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.6525)));
-                                    } else if (salario >= 2500) {
+                                    }else if (salario >= 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.6525)));
                                     }
                                 }
-                            } else if (cargo.equals("administrador")) {
-                                if (mesDiasTrabalho[i] > 20) {
+                            }else if (cargo.equals("administrador")){
+                                if (mesDiasTrabalho[i] > 20){
                                     salario = (mesDiasTrabalho[i] * 80) + (mesDiasTrabalho[i] * 7.5) + ((mesDiasTrabalho[i] * 80) * 0.05);
-                                    if (salario < 1000) {
+                                    if (salario < 1000){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.70)));
-                                    } else if (salario < 2500) {
+                                    }else if (salario < 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.70)));
-                                    } else if (salario >= 2500) {
+                                    }else if (salario >= 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.70)));
                                     }
-                                } else if (mesDiasTrabalho[i] > 17) {
+                                }else if (mesDiasTrabalho[i] > 17){
                                     salario = (mesDiasTrabalho[i] * 80) + (mesDiasTrabalho[i] * 7.5) + ((mesDiasTrabalho[i] * 80) * 0.03);
-                                    if (salario < 1000) {
+                                    if (salario < 1000){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.70)));
-                                    } else if (salario < 2500) {
+                                    }else if (salario < 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.70)));
-                                    } else if (salario >= 2500) {
+                                    }else if (salario >= 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.70)));
                                     }
-                                } else {
+                                }else {
                                     salario = (mesDiasTrabalho[i] * 80) + (mesDiasTrabalho[i] * 7.5);
-                                    if (salario < 1000) {
+                                    if (salario < 1000){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.70)));
-                                    } else if (salario < 2500) {
+                                    }else if (salario < 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.70)));
-                                    } else if (salario >= 2500) {
+                                    }else if (salario >= 2500){
                                         System.out.println("O valor líquido a receber no mês " + (i + 1) + " será: " + (salario - (salario * 0.70)));
                                     }
                                 }
@@ -356,5 +355,8 @@ public class ex_14 {
                 corrigir = input.next();
             }while (corrigir.equals("s"));
         }while (corrigir.equals("s"));
+
+        // Parte d.
+
     }
 }

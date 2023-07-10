@@ -3,36 +3,29 @@ import java.util.Scanner;
 public class ex_12 {
     public static void main(String[] args) {
 
-        System.out.println("***** Exercício 12 *****");
-
+        // Scanner
         Scanner input = new Scanner(System.in);
 
-        // Declarar variável
-        int num, aux = 0, aux2 = 0, var = 0, var1 = 0, var2 = 0;
+        // Declarar Variável
+        int num, counter,var = 0, aux = 0;
 
-        // Ler números do utilizador
-        System.out.print("Quantos números quer inserir na sequência: ");
-        num = input.nextInt();
+        // Ler counter
+        System.out.print("Quantos números quer inserir na sequência? ");
+        counter = input.nextInt();
 
-        if (num>0){
-            while (var<num){
-                var2 = var1;
-                System.out.print("Introduza um número: ");
-                var1 = input.nextInt();
-                var = var + 1;
-                if (var1<var2){
-                    aux = aux + 1;
-                }
-                if (var1 == var2){
-                    aux2 = aux2 + 1;
-                }
+        // Ler num
+        for (int i = 1;i <= counter;i++){
+            System.out.print("Introduza o número "+i+" : ");
+            num = input.nextInt();
+            if (num <= aux){
+                var +=1;
             }
-        }else{
-            System.out.println("Introduza um número positivo!");
+            aux = num;
         }
-        // Printar sé é crescente ou não
-        if (aux >= 1 || aux2 >= 1){
-            System.out.println("A sequência não está crescente!");
+
+        // Printar se é Crescente ou não
+        if (var > 0){
+            System.out.println("A sequência não é crescente!");
         }else{
             System.out.println("A sequência é crescente!");
         }

@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class ex_03 {
     public static void main(String[] args) {
 
-        System.out.println("***** Exercício 03 *****");
-
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Array e Variável

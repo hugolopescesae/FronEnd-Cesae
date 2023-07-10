@@ -3,9 +3,7 @@ import java.util.Scanner;
 public class ex_10 {
     public static void main(String[] args) {
 
-        System.out.println("***** Exercício 10 *****");
-
-        // Instanciar Scanner (Linha obrigatória para ler dados da consola)
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável
@@ -23,18 +21,14 @@ public class ex_10 {
         // Apresentar operação e resultado
         if (operacao.equals("+")){
             System.out.println("A operação escolhida foi a soma, sendo o seu resultado. "+(num1+num2));
+        }else if (operacao.equals("-")){
+            System.out.println("A operação escolhida foi a subtração, sendo o seu resultado. "+(num1-num2));
+        }else if (operacao.equals("*")){
+            System.out.println("A operação escolhida foi a multiplicação, sendo o seu resultado. "+(num1*num2));
+        }else if (operacao.equals("/")){
+            System.out.println("A operação escolhida foi a divisão, sendo o seu resultado. "+(num1/num2));
         }else{
-            if (operacao.equals("-")){
-                System.out.println("A operação escolhida foi a subtração, sendo o seu resultado. "+(num1-num2));
-            }else{
-                if (operacao.equals("*")){
-                    System.out.println("A operação escolhida foi a multiplicação, sendo o seu resultado. "+(num1*num2));
-                }else{
-                    if (operacao.equals("/")){
-                        System.out.println("A operação escolhida foi a divisão, sendo o seu resultado. "+(num1/num2));
-                    }
-                }
-            }
+            System.out.println("Introduza um símbolo válido!");
         }
     }
 }

@@ -3,28 +3,23 @@ import java.util.Scanner;
 public class ex_06 {
     public static void main(String[] args) {
 
-        System.out.println("***** Exercício 06 *****");
-
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável
-        int num, var, var2;
+        int num;
 
-        // Ler número do utilizador
+        // Ler num
         System.out.print("Introduza um número: ");
         num = input.nextInt();
-        var = num + 5;
-        var2 = var + 5;
 
-        // Apresentar números anteriores e seguintes
-        while (num<var){
-            System.out.println(num);
-            num = num + 1;
+        // Apresentar número anteriores
+        for (int i = 0;i < 5;i++){
+            System.out.print((num++)-5+" ");
         }
-        var=var+1;
-        while (var<=var2){
-            System.out.println(var);
-            var = var + 1;
+        num++;
+        for (int i = 0;i < 5;i++){
+            System.out.print((num++)-5+" ");
         }
     }
 }

@@ -3,29 +3,25 @@ import java.util.Scanner;
 public class ex_01 {
     public static void main(String[] args) {
 
-        System.out.println("***** Exercício 01 *****");
-
-        // Instanciar Scanner (Linha obrigatória para ler dados da consola)
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável
         int num1, num2;
 
-        // Ler num1 e num2 do utilizador
-        System.out.print("Introduza um número: ");
+        // Ler num1 e num2
+        System.out.print("Introduza o número 1: ");
         num1 = input.nextInt();
-        System.out.print("Introduza outro número: ");
+        System.out.print("Introduza o número 2: ");
         num2 = input.nextInt();
 
-        // Apresentar o maior número na consola
+        // Apresentar maior
         if (num1==num2){
             System.out.println("Os números são iguais");
+        }else if (num1>num2) {
+            System.out.println("O maior número maior é o primeiro: " + num1);
         }else{
-            if (num1>num2){
-                System.out.println("O maior número é o primeiro: "+num1);
-            }else{
-                System.out.println("O maior número é o segundo: "+num2);
-            }
+            System.out.println("O maior número maior é o segundo: "+num2);
         }
     }
 }

@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class ex_11 {
     public static void main(String[] args) {
 
-        System.out.println("***** Exercício 11 *****");
-
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Matriz

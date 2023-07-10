@@ -3,32 +3,30 @@ import java.util.Scanner;
 public class ex_10 {
     public static void main(String[] args) {
 
-        System.out.println("***** Exercício 10 *****");
-
-        // Instanciar Scanner (Linha obrigatória para ler dados da consola)
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável
-        double diastrabalhomensal, codigousuario, salarioiliquido, salarioliquido, subsidioalimetacaototal, IRS, segurancasocial;
+        double diasTrabalhoMensal, codigousuario, salarioiliquido, salarioliquido, subsidioalimetacaototal, IRS, segurancasocial;
 
         // Declarar Constante
         final double vencibase = 40;
         final double subalim = 5;
 
-        // Ler código de usuário
+        // Ler codigousuario
         System.out.print("Introduza o código de funcionário: ");
         codigousuario= input.nextDouble();
 
-        // Ler número de dias de trabalho mensal
+        // Ler diasTrabalhoMensal
         System.out.print("Introduza a quantidade de dias de trabalho mensal: ");
-        diastrabalhomensal= input.nextDouble();
+        diasTrabalhoMensal= input.nextDouble();
 
         // Cálculo e Apresentação do valor ilíquido a receber fruto do vencimento e subsídio de alimentação (a.)
-        salarioiliquido=(vencibase+subalim)*diastrabalhomensal;
+        salarioiliquido=(vencibase+subalim)*diasTrabalhoMensal;
         System.out.println("O valor do salário ilíquido é: "+salarioiliquido);
 
         // Cálculo do valor do subsídio de alimentação (b.)
-        subsidioalimetacaototal=subalim*diastrabalhomensal;
+        subsidioalimetacaototal=subalim*diasTrabalhoMensal;
         System.out.println("O valor total do subsídio de alimentação é: "+subsidioalimetacaototal);
 
         // Cálculo da retenção de IRS a entregar ao estado (c.)

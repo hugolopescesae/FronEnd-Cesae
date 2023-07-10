@@ -3,9 +3,7 @@ import java.util.Scanner;
 public class ex_09 {
     public static void main(String[] args) {
 
-        System.out.println("***** Exercício 09 *****");
-
-        // Instanciar Scanner (Linha obrigatória para ler dados da consola)
+        // Scanner
         Scanner input = new Scanner(System.in);
 
         // Declarar Variável
@@ -64,10 +62,10 @@ public class ex_09 {
         // Converter segundos para minutos
         horas=segundosTotais/3600;
         minutos=(segundosTotais/60)-(horas*60);
-        segundos=segundosTotais-(horas*3600)-(minutos*60);
+        segundos=(segundosTotais)-(horas*3600)-(minutos*60);
 
         // Apresentar duração do álbum
-        System.out.print("A duração do álbum é: "+horas+minutos+segundos);
+        System.out.print("A duração do álbum é: "+horas+"h"+minutos+"m"+segundos+"s");
 
     }
 }
