@@ -1,26 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Tags Commands -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!-- CSS e Favicon Links -->
-  <link rel="stylesheet" href="CSS/style.css">
-  <link rel="shortcut icon" href="Favicon/" type="image/x-icon">
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,700;1,100;1,300;1,700&display=swap" rel="stylesheet">
-  <!-- BootStrap Links -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
-
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - DogWorld</title>
+    <!-- CSS e Favicon Links -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" href="Favicon/favicon.png" type="image/x-icon">
+    <!-- BootStrap CSS e JS Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer></script>
 </head>
 <body>
-  <div class="small-bar">
-    <a href=""></a>
-  </div>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><em><strong>DogWorld</strong></em></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+              <a class="nav-link" href="Pages/sobrenos.html">Sobre Nós</a>
+              <a class="nav-link" href="Pages/guiaraças.html">Guia de Raças</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Images/Carousel/Carousel/carousel1.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Images/Carousel/Carousel/carousel2.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Images/Carousel/Carousel/carousel3.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br>
+    <!-- Introdução -->
+    <div class="container">
+      <h1 class="text-center">Sobre Nós</h1>
+      <br>
+      <p class="text-center">Na DogWorld, somos apaixonados por cães e dedicamo-nos a partilhar o nosso conhecimento e amor por estes companheiros leais. A nossa equipa é composta por amantes de cães experientes e empenhados em fornecer informações precisas e valiosas sobre as raças caninas. Acreditamos que cada cão é único e o nosso objetivo é ajudar-te a encontrar a raça perfeita que se adapte ao teu estilo de vida e necessidades. Através de perfis detalhados de raças, destacamos as características físicas, o temperamento e os requisitos específicos de cuidados de cada raça, permitindo-te tomar decisões informadas ao escolher o teu novo amigo de quatro patas.</p>
+      <br>
+      <p class="text-center">Para além de fornecer informações especializadas, também nos esforçamos por criar uma comunidade acolhedora de amantes de cães. Os nossos fóruns de discussão são um espaço onde podes partilhar as tuas experiências, colocar questões, obter conselhos e conectar-te com pessoas que partilham a mesma paixão pelos cães. Estamos comprometidos em promover o bem-estar dos cães e fornecer orientações sobre cuidados adequados, alimentação saudável, treino e muito mais. Acreditamos que os cães são membros especiais das nossas famílias e merecem todo o amor e atenção que podemos oferecer.</p>
+      <br>
+      <p class="text-center">Junta-te a nós na DogWorld e embarca nesta emocionante jornada pelo mundo das raças de cães. Estamos aqui para te ajudar a encontrar o teu companheiro canino perfeito e partilhar esta incrível aventura contigo. Bem-vindo à DogWorld, onde o amor pelos cães é o nosso guia!</p>
+      <br>
+      <div class="d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+        <img src="Images/criador.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text text-center">Criador da DogWorld</p>
+        </div>
+      </div>
+      </div>
+      <br>
+      <hr>
+    </div>
+    <!-- Galeria de Fotos -->
+    <div class="container text-center">
+      <h1>Galeria de Fotos</h1>
+      <br>
+      <div class="card-group">
+        <div class="card">
+          <img src="Images/Galeria/gal (1).png" class="card-img-top" alt="...">
+        </div>
+        <div class="card">
+          <img src="Images/Galeria/gal (2).png" class="card-img-top" alt="...">
+        </div>
+        <div class="card">
+          <img src="Images/Galeria/gal (3).png" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img src="Images/Galeria/gal (4).png" class="card-img-top" alt="...">
+        </div>
+        <div class="card">
+          <img src="Images/Galeria/gal (5).png" class="card-img-top" alt="...">
+        </div>
+        <div class="card">
+          <img src="Images/Galeria/gal (6).png" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="card-group">
+        <div class="card">
+          <img src="Images/Galeria/gal (7).png" class="card-img-top" alt="...">
+        </div>
+        <div class="card">
+          <img src="Images/Galeria/gal (8).png" class="card-img-top" alt="...">
+        </div>
+        <div class="card">
+          <img src="Images/Galeria/gal (9).png" class="card-img-top" alt="...">
+        </div>
+      </div>
+      <br>
+      <hr>
+    </div>
+    <!-- FeedBack -->
+    <div class="container">
+      <h1 class="text-center">FeedBack</h1>
+      <br>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="Images/feedback/feedback (1).jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Niko, 2 anos</h5>
+              <p class="card-text">"Quero compartilhar a minha incrível experiência com a DogWorld ao encontrar o meu cão, o Niko. Através dos perfis detalhados de raças e dos recursos disponíveis no site, como galerias de fotos e artigos informativos, pude tomar uma decisão informada e encontrar a raça perfeita para o meu estilo de vida. Além disso, a comunidade acolhedora e os fóruns de discussão me deram suporte valioso ao longo do processo de cuidar e treinar o Niko. Estou muito grato à DogWorld por tornar a jornada de encontrar e cuidar do meu cão uma experiência tão gratificante."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Luci, 1 ano</h5>
+              <p class="card-text">"Gostaria de compartilhar a minha incrível experiência com a DogWorld e como ela me ajudou a encontrar a minha cadela perfeita, a Luci. Graças aos detalhados perfis de raças e às valiosas informações fornecidas no site, pude entender melhor as necessidades e características da raça da Luci. Além disso, a comunidade de amantes de cães foi um apoio fundamental, permitindo-me trocar experiências e obter conselhos úteis ao longo do processo de adoção. Estou extremamente grato à DogWorld por tornar possível a chegada da Luci à minha vida e por me proporcionar uma jornada tão gratificante na busca pelo meu companheiro canino."</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="Images/feedback/feedback (2).jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="Images/feedback/feedback (3).jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Mel, 4 anos</h5>
+              <p class="card-text">"Eu gostaria de expressar minha profunda gratidão à DogWorld pela incrível experiência que tive ao encontrar minha cadela Mel. Através dos perfis detalhados de raças e das valiosas informações fornecidas no site, pude tomar uma decisão informada e encontrar a raça perfeita para mim. A DogWorld foi além ao fornecer recursos úteis e uma comunidade acolhedora de amantes de cães, onde pude compartilhar minhas preocupações e obter conselhos valiosos. A Mel trouxe tanta alegria à minha vida e devo isso à DogWorld por tornar possível essa conexão tão especial. Sou grato por todo o suporte e conhecimento fornecido pela DogWorld durante todo o processo de adoção."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Alfredo, 3 anos</h5>
+              <p class="card-text">"Quero expressar minha imensa gratidão à DogWorld pela incrível experiência que tive ao encontrar meu cão, o Alfredo. Graças aos perfis detalhados de raças e informações valiosas fornecidas no site, pude tomar uma decisão informada e encontrar a raça perfeita para mim. Além disso, a comunidade de amantes de cães da DogWorld foi um recurso inestimável, onde pude compartilhar minhas experiências, receber conselhos valiosos e encontrar apoio ao longo do processo de cuidar do Alfredo. Estou verdadeiramente grato à DogWorld por ajudar a tornar possível essa conexão especial e por fornecer recursos e orientações que contribuíram para a felicidade e bem-estar do Alfredo."</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <img src="Images/feedback/feedback (4).jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+    <!-- Footer -->
+    <div class="container footer">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Início</a></li>
+          <li class="nav-item"><a href="Pages/sobrenos.html" class="nav-link px-2 text-muted">Sobre Nós</a></li>
+          <li class="nav-item"><a href="Pages/guiaraças.html" class="nav-link px-2 text-muted">Guia de Raças</a></li>
+        </ul>
+        <p class="text-center text-muted">&copy; 2023 DogWorld, Inc</p>
+      </footer>
+    </div>
 </body>
 </html>
