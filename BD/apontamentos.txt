@@ -1,5 +1,5 @@
 1 ª Forma Normal - Decompor
-2 ª Forma Normal - atributo faz referencia apenas uma PK
-3 ª Forma Nomarl - 
+2 ª Forma Normal - Atributo faz referencia apenas uma PK
+3 ª Forma Normal - Quando dois ou mais atributos criam um atributo extra, que não depende para a chave primária
 
 Repetição de dados - ex. (marca) - criação de uma tabela extra ex. (tabela marca)
