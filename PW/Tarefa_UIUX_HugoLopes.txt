@@ -1,0 +1,39 @@
+Good UI/UX Examples: 
+
+https://www.globaldata.pt/
+
+- Palete de cores minimalista, coerente e chamativa.
+- Conteúdos divididos por categorias, facilitando assim encontrar um artigo em específico.
+- Icons minimalistas, sendo extramamente intuítivos e de fácil perceção.
+- Artigos divididos por containers, em cards bem estruturados e apenas com as informações necessárias.
+- Website responsivo, bem otimizado para os diferentes tamanhos de ecrãs.
+- Imagens com excelente qualidade, facilitando assim a opinião final na compra do produto por parte do utilizador.
+- Utilização de variadas animações, em diferentes locais do website.
+
+https://www.coinbase.com/pt-PT/
+
+- Navbar com elementos diretos ao assunto, fácil perceção, utilizando a cor azul que cria a emoção/sentimento de "confiança" ao utilizador.
+- Os conteúdos ao longo da página são bem estruturados em containers, dividindo os asuntos em "pedaços" de fácil consumo.
+- Footer com bastante informação, com categorias diretas ao utilizador.
+- Website utiliza cores minimalistas e limpas, criando assim um aspeto visual "clean" e apelativo.
+- Icons e imagens apelativos, simples e sempre interligados com algum conteúdo.
+
+
+Bad UI/UX Examples:
+
+https://www.sapo.pt/
+
+- Muita informação aglomerada, pouco espaçamento entre notícias.
+- Grid/Layout pouco apelativo, possuíndo variadas formas que dificultam a leitura das notícias.
+- Poluição visual devido ao excesso de anúncios, o que dificulta a distinção das notícias dos mesmos.
+- O site contém uma quantidade exorbitante de diferentes conteúdos na mesma página/categoria, criando assim "confusão" no momento da procura de algum conteúdo em específico.
+- A palete de cores utilizada poderia ser mais vasta, criando assim um website mais apelativo ao utilizador.
+
+https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:P%C3%A1gina_principal
+
+- Website pouco intuítivo e chamativo ao utilizador devido a falta de cores, criatividade e estruturação de conteúdos.
+- Dificuldade em localizar conteúdos em uma página específica devido a utilização de imenso texto seguido, utilizando apenas pequenos "headings" para dividir informações, o que dificulta a usabilidade do website.
+- Footer e Header pouco informativos, elementos "espalhados" e colocados de forma pouco prática, sobretudo no footer, torna estes elementos pouco atrativos para o utilizador.
+- A posição das imagens, por vezes, desformata o texto, dificultando assim a leitura do mesmo.
+- Em certos locais do website, por exemplo na enumeração de conteúdos, o texto está alinhado ao centro enquanto no próximo ponto o texto já está alinhado a esquerda.
+- Utilização de letra demasiado pequenas, obrigando o utilizador a redimensionar a página.
