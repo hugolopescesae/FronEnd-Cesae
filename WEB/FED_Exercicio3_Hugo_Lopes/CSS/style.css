@@ -4,6 +4,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.text {
+    text-align: justify;
+}
 
+.form-control{
+    margin-right: 5px;
+}
 
 
