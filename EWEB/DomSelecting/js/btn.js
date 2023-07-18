@@ -1,4 +1,5 @@
 let btn = document.querySelector("button");
+let body = document.querySelector("body");
 
 function color1(){
     let min = Math.ceil(0);
