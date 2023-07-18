@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <script src="../js/calculador.js" defer></script>
+    <script src="../js/calculadora.js" defer></script>
+    <link rel="stylesheet" href="../css/calculadora.css">
 </head>
 <body>
-    <input type="text" name="num1" id="num1" placeholder="Número 1" required>
-    <br>
-    <input type="text" name="text" id="text" placeholder="Símbolo da Operação" required>
-    <br>
-    <input type="text" name="num2" id="num2" placeholder="Número 2" required>
+    <div class="container">
+        <h1>Calculadora</h1>
+        <input type="number" id="num1" placeholder="Número 1">
+        <select name="option" id="operacao">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="/">/</option>
+            <option value="*">*</option>
+        </select>
+        <input type="number" id="num2" placeholder="Número 2">
+        <input type="button" value="=" id="inputButton">
+        <p id="resultado"></p>
+    </div>
 </body>
 </html>
