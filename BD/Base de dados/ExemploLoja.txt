@@ -1,0 +1,39 @@
+CREATE DATABASE loja;
+
+USE loja;
+
+CREATE TABLE Cliente (
+    idCliente int AUTO_INCREMENT,
+    nome varchar(50),
+    cidade varchar(50),
+    codPostal varchar(50),
+    cc varchar(50) UNIQUE,
+    CONSTRAINT PK_Cliente PRIMARY KEY (idCliente)
+);
+
+CREATE TABLE Artigo (
+    idArtigo int AUTO_INCREMENT,
+    nome varchar(50),
+    preco double,
+    categoria varchar(50),
+    CONSTRAINT PK_Artigo PRIMARY KEY (idArtigo)
+);
+
+CREATE TABLE Venda (
+    idVenda int AUTO_INCREMENT,
+    cliente int,
+    dataHora datetime,
+    desconto double CHECK (desconto >= 0 AND desconto <= 100),
+    CONSTRAINT PK_Venda PRIMARY KEY (idVenda),
+    CONSTRAINT FK_Venda_idCliente FOREIGN KEY (cliente) REFERENCES Cliente (idCliente)
+);
+
+CREATE TABLE LinhaVenda (
+    venda int,
+    artigo int,
+    quantidade int,
+    precoUnit double,
+    CONSTRAINT PK_LinhaVenda PRIMARY KEY (venda, artigo),
+    CONSTRAINT FK_LinhaVenda_idCliente FOREIGN KEY (venda) REFERENCES Venda (idVenda),
+    CONSTRAINT FK_LinhaVenda_idArtigo FOREIGN KEY (artigo) REFERENCES Artigo (idArtigo)
+);
