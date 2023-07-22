@@ -10,11 +10,19 @@ public class ex_07 {
         Scanner scanner = new Scanner(file);
 
         String linha;
+        int palavras = 0, linhas = 0;
 
         while (scanner.hasNextLine()){
             linha = scanner.nextLine();
-            String[] itensLinha = linha 
+            String[] itensLinhas = linha.split(" ");
+            if (itensLinhas.length != 1){
+                palavras += itensLinhas.length;
+                linhas++;
+            }
         }
 
+        System.out.println("Linhas: "+linhas+" Palavras: "+palavras);
+
+        scanner.close();
     }
 }
