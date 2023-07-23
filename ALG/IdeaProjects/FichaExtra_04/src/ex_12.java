@@ -3,8 +3,10 @@ import java.util.Scanner;
 public class ex_12 {
     public static void main(String[] args) {
 
+        // Scanner
         Scanner scanner = new Scanner(System.in);
 
+        // Declarar Array e Variável
         int[][] array = new int[3][2];
         int media = 0, counter = 0;
 
@@ -17,6 +19,7 @@ public class ex_12 {
             }
         }
 
+        // Printar média
         System.out.println("O valor da soma é: "+(media/counter));
     }
 }

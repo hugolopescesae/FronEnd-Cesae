@@ -1,0 +1,21 @@
+User Interface (UI):
+
+In essence, User Interface (UI) represents the visual and interactive components of a product, acting as the gateway for user interaction. It encompasses a fusion of visual elements, such as icons, buttons, and menus, crafted to provide users with an intuitive and accessible means to navigate and engage with software applications or digital platforms.
+
+User Experience (UX):
+
+On the other hand, User Experience (UX) encompasses the broader perspective, going beyond the tangible UI elements. UX is the all-encompassing impression that users derive from their entire interaction journey with a product or service. It delves into the emotional aspect, addressing how users feel and perceive the product, as well as their satisfaction with the overall experience.
+
+
+Slide 11
+From now on we will aproach the user centered quiz acessibility, using real examples...
+
+Slide 12/13/14/15
+Starting from the background color/image, as you can see that using a simple gradient color will make it easier to create a contrast between the letters and background, in that way, turning accesible for everyone! Furthermore, increasing the font size will reinforce the point said earlier! 
+
+On the other hand we aligned the text to the center of the page, and clarified the options to improve the UX(User experience).
+
+In addition to keep improving the UI/UX, using options instead of text-writing camps, will enhance the quiz quality making it better for the user. 
+
+Likewise on the slides before, when talking about the higher contrast between the letters and background, we did the same for the numbers and stars. 
+
