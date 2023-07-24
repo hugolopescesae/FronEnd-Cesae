@@ -4,40 +4,49 @@ public class ex_07 {
 
     public static void main(String[] args) {
 
-        // Scanner
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        // Verificar tamanho do array
-        System.out.print("Introduza o tamanho do array: ");
-        int counter = scanner.nextInt();
+        int size;
+        int removedNumber;
+        int count = 0;
+        int index = 0;
 
-        // Declarar array e variável
-        int[] array = new int[counter];
-        int[] arrayFinal = new int[counter];
-        int remover, j = 0;
+        System.out.print("Insert the number of elements in the array: ");
+        size = input.nextInt();
 
-        // Ler array
-        for (int i = 0;i < array.length;i++){
-            System.out.print("Array["+i+"]: ");
-            array[i] = scanner.nextInt();
+        int[] array = new int[size];
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.print("Insert array["+i+"]: ");
+            array[i] = input.nextInt();
         }
 
-        // Remover número
-        System.out.print("Introduza o número que pretende remover: ");
-        remover = scanner.nextInt();
+        System.out.print("Insert the number to remove: ");
+        removedNumber = input.nextInt();
 
-        for (int i = 0;i < array.length;i++){
-            if (array[i] != remover){
-                arrayFinal[j] = array[i];
-                j++;
+        for (int i = 0; i<array.length; i++) {
+            if (array[i] == removedNumber) {
+                count++;
             }
         }
 
-        // Printar array
-        for (int i = 0;i < arrayFinal.length;i++){
-            if (arrayFinal[i] != 0){
-                System.out.print(arrayFinal[i]+" ");
+        int[] newArray = new int[size-count];
+
+        for (int i=0; i<array.length; i++) {
+            if (array[i] != removedNumber) {
+                newArray[index] = array[i];
+                index++;
             }
         }
+
+        if (newArray.length>0) {
+            for (int i = 0; i < newArray.length; i++) {
+                System.out.println(newArray[i]);
+            }
+        } else {
+            System.out.println("Array is empty");
+        }
+
     }
+
 }
