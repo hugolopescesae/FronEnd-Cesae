@@ -3,48 +3,116 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class projetoFinal {
-    public static String[][] lerFicheiro() throws FileNotFoundException {
-        // Ler ficheiro
+    /**
+     * The function readFile() reads file "GameStart.csv" and pass all data to an Array
+     * @return fileArray
+     * @throws FileNotFoundException
+     */
+    public static String[][] readFile() throws FileNotFoundException {
+        // Read File and instance Scanner
         File file = new File("files/GameStart.csv");
         Scanner scanner = new Scanner(file);
 
-        // Declarar Variável
-        int numLinhas = 0, numColunas = 0, aux = 0;
-        String linha;
+        // Declare Variables
+        int numLines = 0, numColumns = 0, aux = 0;
+        String line;
 
-        // Descobrir o numLinhas e numColunas
+        // Find numLines and numColumns
         while (scanner.hasNextLine()){
-            linha = scanner.nextLine();
-            numLinhas++;
-            numColunas = linha.split(";").length;
+            line = scanner.nextLine();
+            numLines++;
+            numColumns = line.split(";").length;
         }
         scanner.close();
 
-        // Preencher array
+        // Declarar array and read file again
         scanner = new Scanner(file);
-        String[][] ficheiro = new String[numLinhas][numColunas];
+        String[][] fileArray = new String[numLines][numColumns];
 
+        // Fill Array
         while (scanner.hasNextLine()){
-            linha = scanner.nextLine();
-            String[] itensLinhas = linha.split(";");
-            for (int i = 0;i < itensLinhas.length;i++){
-                    ficheiro[aux][i] = itensLinhas[i];
+            line = scanner.nextLine();
+            String[] lineItems = line.split(";");
+            for (int i = 0;i < lineItems.length;i++){
+                    fileArray[aux][i] = lineItems[i];
             }
             aux++;
         }
         scanner.close();
 
-        return ficheiro;
+        return fileArray;
+    }
+
+    /**
+     * The function salesNumber() prints the number of sales
+     * @return salesNumber
+     * @throws FileNotFoundException
+     */
+    public static int salesNumber() throws FileNotFoundException {
+        // Declare array (using function readFile()) and Variables
+        String[][] array = readFile();
+        int salesNumber = 0;
+
+        // Find salesNumber
+        for (int i = 1;i < array.length;i++){
+            salesNumber++;
+        }
+
+        // Return salesNumber
+        return salesNumber;
+    }
+
+    /**
+     * The function salesValue() prints the sales Value
+     * @return salesValue
+     * @throws FileNotFoundException
+     */
+    public static double salesValue() throws FileNotFoundException {
+        // Declare array (using function readFile()) and Variables
+        String[][] array = readFile();
+        double salesValue = 0;
+
+        // Find salesValue
+        for (int i = 1;i < array.length;i++){
+            salesValue += Double.parseDouble(array[i][8]);
+        }
+        // Return salesValue
+        return salesValue;
+    }
+
+    /**
+     * The funtcion totalProfit prints the 10% margin profit from all salesValue
+     * @return totalProfit
+     * @throws FileNotFoundException
+     */
+    public static double totalProfit() throws FileNotFoundException {
+        // Declare Variable (using function salesValue())
+        double totalProfit = salesValue();
+
+        // Find totalProfit with 10% margin of profit from all sales
+        totalProfit = totalProfit * 0.10;
+
+        return totalProfit;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public static String[] clientInfo(int idCliente) throws FileNotFoundException {
+        // Declare array (using function readFile()) and Variables
+        String[][] array = readFile();
+
+    }
+    public static void adminMenu(){
+
+    }
+
+    public static void clientMenu(){
+
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        String[][] matriz = lerFicheiro();
 
-        for (int i = 0;i < matriz.length;i++){
-            for (int j = 0;j < matriz[0].length;j++){
-                System.out.print(matriz[i][j]+" ");
-            }
-            System.out.println();
-        }
     }
 }
