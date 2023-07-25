@@ -9,20 +9,19 @@ button.addEventListener("click", function(){
 
     switch (simbolo){
         case "+": 
-            resultado.innerText = parseInt(num1) + parseInt(num2);
+            resultado.value = parseInt(num1) + parseInt(num2);
             break;
         case "-": 
-            resultado.innerText = num1 - num2;
+            resultado.value = num1 - num2;
             break;
         case "/": 
-            resultado.innerText = num1 / num2;
+            resultado.value = num1 / num2;
             break;
         case "*": 
-            resultado.innerText = num1 * num2;
+            resultado.value = num1 * num2;
             break;
         default: 
-            resultado.innerText = ("Operação Inválida");
+            resultado.value = ("Operação Inválida");
             break;
     }
 })
-

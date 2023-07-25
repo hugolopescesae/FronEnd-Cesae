@@ -81,7 +81,7 @@ public class projetoFinal {
     }
 
     /**
-     * The funtcion totalProfit prints the 10% margin profit from all salesValue
+     * The funtcion totalProfit() prints the 10% margin profit from all salesValue
      * @return totalProfit
      * @throws FileNotFoundException
      */
@@ -96,14 +96,67 @@ public class projetoFinal {
     }
 
     /**
-     *
-     * @return
+     * The function clientInfo() prints the client name, contact and email
+     * @return clientInfo
+     * @throws FileNotFoundException
      */
-    public static String[] clientInfo(int idCliente) throws FileNotFoundException {
+    public static String clientInfo(int idCliente) throws FileNotFoundException {
         // Declare array (using function readFile()) and Variables
         String[][] array = readFile();
+        String clientInfo = new String();
+        int columnIdCliente = 0;
 
+        // Find idCliente Column
+        for (int i = 0;i < array[0].length;i++){
+            if (array[0][i].equals("idCliente")){
+                columnIdCliente = i;
+            }
+        }
+
+        // Find idCliente number and return Name, Contact and email
+        for (int i = 0;i < array.length;i++){
+            if (array[i][columnIdCliente].equals(Integer.toString(idCliente))){
+                clientInfo ="Name: "+array[i][++columnIdCliente]+"\nContact: "+array[i][++columnIdCliente]+"\nEmail: "+array[i][++columnIdCliente];
+                break;
+            }
+        }
+
+        return clientInfo;
     }
+
+    /**
+     * The function moreExpensiveGame() prints the game value and clients who bought it
+     * @return
+     * @throws FileNotFoundException
+     */
+    public static String[] moreExpensiveGame() throws FileNotFoundException {
+        // Declare array (using function readFile()) and Variables
+        String[][] array = readFile();
+        String[] moreExpensiveGame = new String[60];
+        int columnValor = 0, aux = 0;
+        Double max;
+
+        // Find valor Column
+        for (int i = 0;i < array[0].length;i++){
+            if (array[0][i].equals("valor")){
+                columnValor = i;
+            }
+        }
+
+
+        // Find max value and print clients who bought it
+        max = Double.parseDouble(array[1][columnValor]);
+        for (int i = 1;i < array.length;i++){
+            if (max < Double.parseDouble(array[i][columnValor])){
+                moreExpensiveGame[aux] += array[i][--columnValor] + array[i][columnValor] +"\n";
+                aux++;
+            }
+        }
+
+        return moreExpensiveGame;
+    }
+
+
     public static void adminMenu() throws FileNotFoundException {
 
     }
@@ -113,6 +166,9 @@ public class projetoFinal {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-
+        String[] array = moreExpensiveGame();
+        for (int i = 0;i < array.length;i++){
+            System.out.println(array[i]);
+        }
     }
 }

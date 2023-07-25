@@ -4,9 +4,9 @@ Funções:
 - Calcular lucro total
 - Apresentar informações do cliente pelo idCliente
 - Imprimir jogo mais caro e quais clientes compraram
-- Menu Cliente
 
------- Imprimir Vendas
+
+------ Imprimir VendasMenu Cliente
 - Imprimir todos os jogos
 - Imprimir jogos(divididos por categorias) de uma editora
 
