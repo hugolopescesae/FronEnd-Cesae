@@ -104,7 +104,7 @@ public class projetoFinal {
         String[][] array = readFile();
 
     }
-    public static void adminMenu(){
+    public static void adminMenu() throws FileNotFoundException {
 
     }
 
