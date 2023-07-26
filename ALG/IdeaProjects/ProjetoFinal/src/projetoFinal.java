@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class projetoFinal {
@@ -124,14 +125,79 @@ public class projetoFinal {
     public static String[] mostExpensiveGame() throws FileNotFoundException {
         // Declare array (using function readFile()) and Variables
         String[][] array = readFile();
-        Double max = Double.parseDouble(array[1][8]);
+        int counter = 0, aux = 0;
+        double max = Double.parseDouble(array[1][8]);
 
-        // Find the
+        // Find the most expensive game
+        for (int i = 1;i < array.length;i++){
+            if (max < Double.parseDouble(array[i][8])){
+                max = Double.parseDouble(array[i][8]);
+            }
+        }
 
+        // Find how many times the max value appears on GameStart.csv
+        for (int i = 1;i < array.length;i++){
+            if (max == Double.parseDouble(array[i][8])){
+                counter++;
+            }
+        }
+        String[] mostExpensiveGame = new String[counter];
 
+        // Store all lines that have the same game price as max
+        for (int i = 1;i < array.length;i++){
+            if (max == Double.parseDouble(array[i][8])){
+                mostExpensiveGame[aux] = Arrays.toString(array[i]);
+                aux++;
+            }
+        }
+
+        return mostExpensiveGame;
     }
 
+    /**
+     * The function allGames() prints all the games existing on GameStart
+     * @return allGames
+     * @throws FileNotFoundException
+     */
+    public static String[] allGames() throws FileNotFoundException{
+        // Declare array (using function readFile()) and Variables
+        String[][] array = readFile();
+        int aux = 0, counter = 0, aux2 = 0;
 
+        // Verify how many diferent games exists
+        for (int i = 1;i < array.length;i++){
+            for (int j = i+1;j < array.length;j++){
+                if (array[i][7].equals(array[j][7])){
+                    aux++;
+                }
+            }
+            if (aux == 0){
+                counter++;
+            }
+            aux = 0;
+        }
+        System.out.println(counter);
+
+        String[] allGames = new String[counter];
+        // Add the games to the array
+        for (int i = 1;i < array.length;i++){
+            for (int j = i+1;j < array.length;j++){
+                if (array[i][7].equals(array[j][7])){
+                    aux++;
+                }
+            }
+            if (aux == 0){
+                allGames[aux2] = array[i][7];
+                aux2++;
+            }
+            aux = 0;
+        }
+        return allGames;
+    }
+
+    public static String[] allPublishers() throws FileNotFoundException {
+
+    }
     public static void adminMenu() throws FileNotFoundException {
 
     }
@@ -141,6 +207,21 @@ public class projetoFinal {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
+        // Instance Scanner
+        Scanner scanner = new Scanner(System.in);
+
+        // Declare Variables
+        String tipoUtilizador;
+        String[] array = allGames();
+
+        // Starting menu
+        System.out.println("***** GameStart - Game shop *****");
+        System.out.println("Tipo de Utilizador (ADMIN || CLIENTE): ");
+        tipoUtilizador = scanner.nextLine().toLowerCase();
+
+        for (int i = 0;i < array.length;i++){
+            System.out.println(array[i]);
+        }
 
     }
 }
