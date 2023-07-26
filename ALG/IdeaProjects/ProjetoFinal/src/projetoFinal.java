@@ -104,19 +104,11 @@ public class projetoFinal {
         // Declare array (using function readFile()) and Variables
         String[][] array = readFile();
         String clientInfo = new String();
-        int columnIdCliente = 0;
 
-        // Find idCliente Column
-        for (int i = 0;i < array[0].length;i++){
-            if (array[0][i].equals("idCliente")){
-                columnIdCliente = i;
-            }
-        }
-
-        // Find idCliente number and return Name, Contact and email
+        // Find Name, Contact and email
         for (int i = 0;i < array.length;i++){
-            if (array[i][columnIdCliente].equals(Integer.toString(idCliente))){
-                clientInfo ="Name: "+array[i][++columnIdCliente]+"\nContact: "+array[i][++columnIdCliente]+"\nEmail: "+array[i][++columnIdCliente];
+            if (array[i][1].equals(Integer.toString(idCliente))){
+                clientInfo = "Name: "+array[i][2]+"\nContact: "+array[i][3]+"\nEmail: "+array[i][4];
                 break;
             }
         }
@@ -129,31 +121,14 @@ public class projetoFinal {
      * @return
      * @throws FileNotFoundException
      */
-    public static String[] moreExpensiveGame() throws FileNotFoundException {
+    public static String[] mostExpensiveGame() throws FileNotFoundException {
         // Declare array (using function readFile()) and Variables
         String[][] array = readFile();
-        String[] moreExpensiveGame = new String[60];
-        int columnValor = 0, aux = 0;
-        Double max;
+        Double max = Double.parseDouble(array[1][8]);
 
-        // Find valor Column
-        for (int i = 0;i < array[0].length;i++){
-            if (array[0][i].equals("valor")){
-                columnValor = i;
-            }
-        }
+        // Find the
 
 
-        // Find max value and print clients who bought it
-        max = Double.parseDouble(array[1][columnValor]);
-        for (int i = 1;i < array.length;i++){
-            if (max < Double.parseDouble(array[i][columnValor])){
-                moreExpensiveGame[aux] += array[i][--columnValor] + array[i][columnValor] +"\n";
-                aux++;
-            }
-        }
-
-        return moreExpensiveGame;
     }
 
 
@@ -166,9 +141,6 @@ public class projetoFinal {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        String[] array = moreExpensiveGame();
-        for (int i = 0;i < array.length;i++){
-            System.out.println(array[i]);
-        }
+
     }
 }
