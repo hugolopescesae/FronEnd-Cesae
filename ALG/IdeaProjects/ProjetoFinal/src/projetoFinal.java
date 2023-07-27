@@ -77,6 +77,7 @@ public class projetoFinal {
         for (int i = 1;i < array.length;i++){
             salesValue += Double.parseDouble(array[i][8]);
         }
+
         // Return salesValue
         return salesValue;
     }
@@ -176,7 +177,6 @@ public class projetoFinal {
             }
             aux = 0;
         }
-        System.out.println(counter);
 
         String[] allGames = new String[counter];
         // Add the games to the array
@@ -196,13 +196,61 @@ public class projetoFinal {
     }
 
     public static String[] allPublishers() throws FileNotFoundException {
+        // Declare array (using function readFile()) and Variables
+        String[][] array = readFile();
+        int aux = 0, counter = 0, aux2 = 0;
 
+        // Verify how many diferent publishers
+        for (int i = 1;i < array.length;i++){
+            for (int j = i+1;j < array.length;j++){
+                if (array[i][5].equals(array[j][5])){
+                    aux++;
+                }
+            }
+            if (aux == 0){
+                counter++;
+            }
+            aux = 0;
+        }
+        String[][] publisher = new String[counter][];
+
+        // Add the publisher to an array
+        for (int i = 1;i < array.length;i++){
+            for (int j = i+1;j < array.length;j++){
+                if (array[i][5].equals(array[j][5])){
+                    aux++;
+                }
+            }
+            if (aux == 0){
+                for (int k = 0;k < array.length;k++){
+                    publisher[aux2][k] = array[i][7];
+                    aux2++;
+                }
+            }
+            aux = 0;
+        }
+
+        // Add all games to the array and organise them by categories
+        for (int i = 1;i < array.length;i++){
+            for (int j = i+1;j < array.length;j++){
+                if (array[i][5].equals(array[j][5])){
+                    aux++;
+                }
+            }
+            if (aux == 0){
+                publisher[aux2] = array[i][7];
+                aux2++;
+            }
+            aux = 0;
+        }
+
+        return allPublishers;
     }
     public static void adminMenu() throws FileNotFoundException {
 
     }
 
-    public static void clientMenu(){
+    public static void clientMenu() throws FileNotFoundException {
 
     }
 
@@ -212,8 +260,8 @@ public class projetoFinal {
 
         // Declare Variables
         String tipoUtilizador;
-        String[] array = allGames();
-
+        String[] array = mostExpensiveGame();
+        
         // Starting menu
         System.out.println("***** GameStart - Game shop *****");
         System.out.println("Tipo de Utilizador (ADMIN || CLIENTE): ");
@@ -221,6 +269,7 @@ public class projetoFinal {
 
         for (int i = 0;i < array.length;i++){
             System.out.println(array[i]);
+
         }
 
     }
