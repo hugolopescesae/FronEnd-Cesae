@@ -1,6 +1,7 @@
+import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class projetoFinal {
@@ -126,7 +127,7 @@ public class projetoFinal {
     public static String[] mostExpensiveGame() throws FileNotFoundException {
         // Declare array (using function readFile()) and Variables
         String[][] array = readFile();
-        int counter = 0, aux = 0;
+        int counter = 0, aux = 1;
         double max = Double.parseDouble(array[1][8]);
 
         // Find the most expensive game
@@ -142,12 +143,13 @@ public class projetoFinal {
                 counter++;
             }
         }
-        String[] mostExpensiveGame = new String[counter];
+        String[] mostExpensiveGame = new String[counter+1];
+        mostExpensiveGame[0] = Double.toString(max);
 
         // Store all lines that have the same game price as max
         for (int i = 1;i < array.length;i++){
             if (max == Double.parseDouble(array[i][8])){
-                mostExpensiveGame[aux] = Arrays.toString(array[i]);
+                mostExpensiveGame[aux] = array[i][2];
                 aux++;
             }
         }
@@ -195,7 +197,8 @@ public class projetoFinal {
         return allGames;
     }
 
-    public static String[] allPublishers() throws FileNotFoundException {
+
+    public void  allPublishers(int publisher) throws FileNotFoundException {
         // Declare array (using function readFile()) and Variables
         String[][] array = readFile();
         int aux = 0, counter = 0, aux2 = 0;
@@ -238,39 +241,163 @@ public class projetoFinal {
                 }
             }
             if (aux == 0){
-                publisher[aux2] = array[i][7];
+
                 aux2++;
             }
             aux = 0;
         }
 
-        return allPublishers;
     }
+
+    /**
+     * The function adminMenu() start the admin menu
+     * @throws FileNotFoundException
+     */
     public static void adminMenu() throws FileNotFoundException {
-
-    }
-
-    public static void clientMenu() throws FileNotFoundException {
-
-    }
-
-    public static void main(String[] args) throws FileNotFoundException {
         // Instance Scanner
         Scanner scanner = new Scanner(System.in);
 
         // Declare Variables
-        String tipoUtilizador;
-        String[] array = mostExpensiveGame();
-        
-        // Starting menu
-        System.out.println("***** GameStart - Game shop *****");
-        System.out.println("Tipo de Utilizador (ADMIN || CLIENTE): ");
-        tipoUtilizador = scanner.nextLine().toLowerCase();
+        int option;
 
-        for (int i = 0;i < array.length;i++){
-            System.out.println(array[i]);
+        // Start the admin menu
+        do {
+            do {
+                try {
+                    System.out.print("********** ADMIN MENU **********\n1 - Print GameStart file\n2 - Print all sales and total value\n3 - Print total profit\n4 - Search Client by id\n5 - Print most espensive game and buyers\n0 - Leave from Admin Menu\n********************************\nSelect the desired option: ");
+                    option = scanner.nextInt();
+                }catch (InputMismatchException exc){
+                    System.out.println("Wrong option selected");
+                    option = 0;
+                }
+            }while (option < 0 || option > 5);
+            switch (option){
+                case 1: // "Print the file GameStart.csv"
+                    String[][] array1 = readFile();
+                    System.out.println("***** Option 1 *****");
+                    for (int i = 0;i < array1.length;i++){
+                        for (int j = 0;j < array1[0].length;j++){
+                            System.out.print(array1[i][j]+"\t");
+                        }
+                        System.out.println(" ");
+                    }
+                    break;
+                case 2: // "Print the number of sales and total value"
+                    System.out.println("***** Option 2 *****");
+                    System.out.println("Total sales: "+salesNumber());
+                    System.out.println("Total sales value: "+salesValue());
+                    break;
+                case 3: // "Print the total profit from all sales"
+                    System.out.println("***** Option 3 *****");
+                    System.out.println("Total profit: "+totalProfit());
+                    break;
+                case 4: // "Given an idCliente print name, contact and email of the client"
+                    int idCliente;
+                    System.out.println("***** Option 4 *****");
+                    System.out.print("Insert idCliente: ");
+                    idCliente = scanner.nextInt();
+                    System.out.println(clientInfo(idCliente));
+                    break;
+                case 5: // "Print the most expensive game and the clients that bought it"
+                    String[] array5 = mostExpensiveGame();
+                    System.out.println("***** Option 5 *****");
+                    for (int i = 0;i < array5.length;i++){
+                        if (i == 0){
+                            System.out.println("The most expensive game costs: "+array5[i]+"€");
+                        }else{
+                            System.out.println("Client "+i+" : "+array5[i]);
+                        }
+                    }
+                    break;
+            }
+        }while (option != 0);
+        System.out.println("Leaving Admin menu...");
+    }
 
-        }
+    /**
+     * The function clienteMenu() start the admin menu
+     * @throws FileNotFoundException
+     */
+    public static void clienteMenu() throws FileNotFoundException {
+        // Instance Scanner
+        Scanner scanner = new Scanner(System.in);
 
+        // Declare Variables
+        int option;
+
+        // Start the client menu
+        do {
+            do {
+                System.out.print("********** CLIENTE MENU **********\n1 - Print all games\n2 - Print all games from one publisher, by categories\n0 - Leave from Admin Menu\n********************************\nSelect the desired option: ");
+                option = scanner.nextInt();
+            }while (option < 0 || option > 2);
+            switch (option){
+                case 1:
+                    String[] array1 = allGames();
+                    for (int i = 0;i < array1.length;i++){
+                        System.out.println(array1[i]);
+                    }
+                    break;
+                case 2:
+                    int publisher;
+                    System.out.print("Choose an publisher: ");
+                    publisher = scanner.nextInt();
+
+
+            }
+        }while (option != 0);
+        System.out.println("Leaving Cliente menu...");
+    }
+
+    public static void main(String[] args) throws FileNotFoundException {
+        // Instance Scanner to read user answers
+        Scanner scanner = new Scanner(System.in);
+
+        // Declare Variable
+        String userType, password, stop;
+        boolean repeat = false;
+
+        // Start the menu
+        System.out.println("***** Welcome to GameStart *****");
+        do {
+            System.out.print("User type (ADMIN || CLIENTE): ");
+            do {
+                userType = scanner.nextLine().toLowerCase();
+                if (userType.equals("admin")){
+                    do {
+                        System.out.print("Insert password: ");
+                        password = scanner.nextLine();
+                        if (password.equals("1234")){
+                            adminMenu();
+                            repeat = false;
+                        }else{
+                            System.out.println("Wrong password!");
+                            repeat = true;
+                        }
+                    }while (repeat);
+                }else if (userType.equals("cliente")){
+                    clienteMenu();
+                }else{
+                    System.out.print("Please, select Cliente or Admin: ");
+                    repeat = true;
+                }
+            }while (repeat);
+            System.out.println("Do you want to leave the GameStart Platform?(yes/no)");
+            do {
+                stop = scanner.nextLine().toLowerCase();
+                if (stop.equals("yes") || stop.equals("y")){
+                    System.out.print("Leaving GameStart Platform...");
+                    repeat = false;
+                }else if (stop.equals("no") || stop.equals("n")){
+                    repeat = false;
+                }else{
+                    System.out.print("Invalid choice! Please, select yes or no: ");
+                    repeat = true;
+                }
+            }while (repeat);
+            if (stop.equals("no") || stop.equals("n")){
+                repeat = true;
+            }
+        }while (repeat);
     }
 }
