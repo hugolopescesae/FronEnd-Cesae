@@ -1,4 +1,3 @@
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.InputMismatchException;
@@ -11,11 +10,9 @@ public class projetoFinal {
      * @throws FileNotFoundException
      */
     public static String[][] readFile() throws FileNotFoundException {
-        // Read File and instance Scanner
+        // Read File, instance Scanner and declare variables
         File file = new File("files/GameStart.csv");
         Scanner scanner = new Scanner(file);
-
-        // Declare Variables
         int numLines = 0, numColumns = 0, aux = 0;
         String line;
 
@@ -27,7 +24,7 @@ public class projetoFinal {
         }
         scanner.close();
 
-        // Declarar array and read file again
+        // Declare array and read file again
         scanner = new Scanner(file);
         String[][] fileArray = new String[numLines][numColumns];
 
@@ -46,12 +43,12 @@ public class projetoFinal {
     }
 
     /**
-     * The function salesNumber() prints the number of sales
+     * The function salesNumber() prints the number of total sales
      * @return salesNumber
      * @throws FileNotFoundException
      */
     public static int salesNumber() throws FileNotFoundException {
-        // Declare array (using function readFile()) and Variables
+        // Declare array (using function readFile()) and declare variable
         String[][] array = readFile();
         int salesNumber = 0;
 
@@ -60,17 +57,16 @@ public class projetoFinal {
             salesNumber++;
         }
 
-        // Return salesNumber
         return salesNumber;
     }
 
     /**
-     * The function salesValue() prints the sales Value
+     * The function salesValue() prints the total sales value
      * @return salesValue
      * @throws FileNotFoundException
      */
     public static double salesValue() throws FileNotFoundException {
-        // Declare array (using function readFile()) and Variables
+        // Declare array (using function readFile()) and declare variable
         String[][] array = readFile();
         double salesValue = 0;
 
@@ -79,12 +75,11 @@ public class projetoFinal {
             salesValue += Double.parseDouble(array[i][8]);
         }
 
-        // Return salesValue
         return salesValue;
     }
 
     /**
-     * The funtcion totalProfit() prints the 10% margin profit from all salesValue
+     * The function totalProfit() prints the 10% margin profit from all salesValue
      * @return totalProfit
      * @throws FileNotFoundException
      */
@@ -103,14 +98,14 @@ public class projetoFinal {
      * @return clientInfo
      * @throws FileNotFoundException
      */
-    public static String clientInfo(int idCliente) throws FileNotFoundException {
-        // Declare array (using function readFile()) and Variables
+    public static String clientInfo(String idCliente) throws FileNotFoundException {
+        // Declare array (using function readFile()) and declare variable
         String[][] array = readFile();
-        String clientInfo = new String();
+        String clientInfo = "";
 
         // Find Name, Contact and email
         for (int i = 0;i < array.length;i++){
-            if (array[i][1].equals(Integer.toString(idCliente))){
+            if (array[i][1].equals(idCliente)){
                 clientInfo = "Name: "+array[i][2]+"\nContact: "+array[i][3]+"\nEmail: "+array[i][4];
                 break;
             }
@@ -121,7 +116,7 @@ public class projetoFinal {
 
     /**
      * The function moreExpensiveGame() prints the game value and clients who bought it
-     * @return
+     * @return mostExpensiveGame
      * @throws FileNotFoundException
      */
     public static String[] mostExpensiveGame() throws FileNotFoundException {
@@ -197,56 +192,83 @@ public class projetoFinal {
         return allGames;
     }
 
-
-    public void  allPublishers(int publisher) throws FileNotFoundException {
-        // Declare array (using function readFile()) and Variables
+    /**
+     * The function publisherExists() verify if the publisher given exists
+     * @param publisher
+     * @return
+     * @throws FileNotFoundException
+     */
+    public static boolean publisherExists(String publisher) throws FileNotFoundException {
+        // Declare array (using function allPublishers()) and declare variable
         String[][] array = readFile();
-        int aux = 0, counter = 0, aux2 = 0;
+        boolean publisherExists;
 
-        // Verify how many diferent publishers
+        // Verify if publisher selected exists
         for (int i = 1;i < array.length;i++){
-            for (int j = i+1;j < array.length;j++){
-                if (array[i][5].equals(array[j][5])){
-                    aux++;
-                }
+            if (array[i][5].equalsIgnoreCase(publisher)){
+                return publisherExists = true;
             }
-            if (aux == 0){
-                counter++;
-            }
-            aux = 0;
-        }
-        String[][] publisher = new String[counter][];
-
-        // Add the publisher to an array
-        for (int i = 1;i < array.length;i++){
-            for (int j = i+1;j < array.length;j++){
-                if (array[i][5].equals(array[j][5])){
-                    aux++;
-                }
-            }
-            if (aux == 0){
-                for (int k = 0;k < array.length;k++){
-                    publisher[aux2][k] = array[i][7];
-                    aux2++;
-                }
-            }
-            aux = 0;
         }
 
-        // Add all games to the array and organise them by categories
+        return publisherExists = false;
+    }
+
+    /**
+     * The function printGamesByPublisherAndCategories() prints all games by categories from a chosen publisher
+     * @param publisher
+     * @return printGamesByPublisherAndCategories
+     * @throws FileNotFoundException
+     */
+    public static String printGamesByPublisherAndCategories(String publisher) throws FileNotFoundException {
+        // Declare array (using function readFile()) and declare variables
+        String[][] array = readFile();
+        String[] printedCategories = new String[array.length];
+        String[] printedGames = new String[array.length];
+        int printedCategoriesCount = 0;
+        int printedGamesCount = 0;
+
+        // String to build the output
+        String printGamesByPublisherAndCategories = "****** "+publisher.toUpperCase()+" ******\n";
+
+        // Print categories and games for the given publisher
         for (int i = 1;i < array.length;i++){
-            for (int j = i+1;j < array.length;j++){
-                if (array[i][5].equals(array[j][5])){
-                    aux++;
+            if (array[i][5].equalsIgnoreCase(publisher)) {
+                String category = array[i][6];
+                String game = array[i][7];
+
+                // Check if the category has already been printed
+                boolean categoryAlreadyPrinted = false;
+                for (int j = 0;j < printedCategoriesCount;j++){
+                    if (printedCategories[j].equals(category)){
+                        categoryAlreadyPrinted = true;
+                        break;
+                    }
+                }
+
+                if (!categoryAlreadyPrinted){
+                    printGamesByPublisherAndCategories += "----- "+category+" -----\n";
+                    printedCategories[printedCategoriesCount] = category;
+                    printedCategoriesCount++;
+                }
+
+                // Check if the game has already been printed
+                boolean gameAlreadyPrinted = false;
+                for (int j = 0; j < printedGamesCount; j++){
+                    if (printedGames[j].equals(game)) {
+                        gameAlreadyPrinted = true;
+                        break;
+                    }
+                }
+
+                if (!gameAlreadyPrinted){
+                    printGamesByPublisherAndCategories += "- "+game+"\n";
+                    printedGames[printedGamesCount] = game;
+                    printedGamesCount++;
                 }
             }
-            if (aux == 0){
-
-                aux2++;
-            }
-            aux = 0;
         }
 
+        return printGamesByPublisherAndCategories;
     }
 
     /**
@@ -254,21 +276,21 @@ public class projetoFinal {
      * @throws FileNotFoundException
      */
     public static void adminMenu() throws FileNotFoundException {
-        // Instance Scanner
+        // Instance Scanner and declare variable
         Scanner scanner = new Scanner(System.in);
-
-        // Declare Variables
-        int option;
+        int option = -1;
 
         // Start the admin menu
         do {
             do {
+                // Prints the information of the menu
                 try {
                     System.out.print("********** ADMIN MENU **********\n1 - Print GameStart file\n2 - Print all sales and total value\n3 - Print total profit\n4 - Search Client by id\n5 - Print most espensive game and buyers\n0 - Leave from Admin Menu\n********************************\nSelect the desired option: ");
                     option = scanner.nextInt();
                 }catch (InputMismatchException exc){
                     System.out.println("Wrong option selected");
-                    option = 0;
+                    scanner.nextLine();
+                    option = -1;
                 }
             }while (option < 0 || option > 5);
             switch (option){
@@ -292,11 +314,22 @@ public class projetoFinal {
                     System.out.println("Total profit: "+totalProfit());
                     break;
                 case 4: // "Given an idCliente print name, contact and email of the client"
-                    int idCliente;
+                    String idCliente = "";
                     System.out.println("***** Option 4 *****");
-                    System.out.print("Insert idCliente: ");
-                    idCliente = scanner.nextInt();
-                    System.out.println(clientInfo(idCliente));
+                    do {
+                        System.out.print("Insert idCliente: ");
+                        idCliente = scanner.next();
+
+                        if (idCliente.equals("0")){
+                            System.out.println("Invalid IdCliente!");
+                            idCliente = "0";
+                        }else if (idCliente.equals("sair")){
+                            break;
+                        }else{
+                            System.out.println(clientInfo(idCliente));
+                        }
+
+                    }while (idCliente.equals("0"));
                     break;
                 case 5: // "Print the most expensive game and the clients that bought it"
                     String[] array5 = mostExpensiveGame();
@@ -315,40 +348,63 @@ public class projetoFinal {
     }
 
     /**
-     * The function clienteMenu() start the admin menu
+     * The function clienteMenu() start the cliente menu
      * @throws FileNotFoundException
      */
     public static void clienteMenu() throws FileNotFoundException {
-        // Instance Scanner
+        // Instance Scanner and declare variable
         Scanner scanner = new Scanner(System.in);
-
-        // Declare Variables
-        int option;
+        int option = -1;
 
         // Start the client menu
         do {
             do {
-                System.out.print("********** CLIENTE MENU **********\n1 - Print all games\n2 - Print all games from one publisher, by categories\n0 - Leave from Admin Menu\n********************************\nSelect the desired option: ");
-                option = scanner.nextInt();
+                // Prints the information of the menu
+                try {
+                    System.out.print("********** CLIENTE MENU **********\n1 - Print all games\n2 - Print all games from one publisher, by categories\n0 - Leave from Admin Menu\n********************************\nSelect the desired option: ");
+                    option = scanner.nextInt();
+                }catch (InputMismatchException exc){
+                    System.out.println("Wrong option! Choose the menu option again!");
+                    scanner.next();
+                    option = -1;
+                }
             }while (option < 0 || option > 2);
             switch (option){
-                case 1:
+                case 1: // Prints all the games that exists in the GameStart Shop
                     String[] array1 = allGames();
                     for (int i = 0;i < array1.length;i++){
                         System.out.println(array1[i]);
                     }
                     break;
-                case 2:
-                    int publisher;
-                    System.out.print("Choose an publisher: ");
-                    publisher = scanner.nextInt();
+                case 2: // Prints all the games and categories, using the selected publisher
+                    scanner.nextLine();
+                    System.out.print("Enter the publisher name: ");
+                    String publisher = scanner.nextLine();
 
+                    if (publisher.equals("sair")){
+                        break;
+                    }
 
+                    while(!publisherExists(publisher)) {
+                        System.out.println("Publisher not found! Please choose a valid publisher.");
+
+                        System.out.print("Enter the publisher name: ");
+                        publisher = scanner.nextLine();
+                    }
+
+                    String result = printGamesByPublisherAndCategories(publisher);
+                    System.out.println(result);
+                    break;
             }
         }while (option != 0);
         System.out.println("Leaving Cliente menu...");
     }
 
+    /**
+     * The function main() starts the program
+     * @param args
+     * @throws FileNotFoundException
+     */
     public static void main(String[] args) throws FileNotFoundException {
         // Instance Scanner to read user answers
         Scanner scanner = new Scanner(System.in);

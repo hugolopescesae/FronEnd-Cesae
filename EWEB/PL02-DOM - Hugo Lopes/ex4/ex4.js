@@ -25,6 +25,7 @@ function createbuttons() {
         let tamanhoAtual = window.getComputedStyle(p).fontSize;
         let tamanhoNovo = parseFloat(tamanhoAtual) * 1.2; // Aumenta em 20%
         p.style.fontSize = tamanhoNovo + "px";
+        p.style.textAlign = "center";
     }
 
     let createButton2 = document.createElement("button");
@@ -37,5 +38,6 @@ function createbuttons() {
         let tamanhoAtual = window.getComputedStyle(p).fontSize;
         let tamanhoNovo = parseFloat(tamanhoAtual) * 0.8; // Aumenta em 20%
         p.style.fontSize = tamanhoNovo + "px";
+        p.style.textAlign = "right";
     }
 }
