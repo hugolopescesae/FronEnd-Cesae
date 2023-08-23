@@ -95,7 +95,8 @@ public class projetoFinal {
 
     /**
      * The function clientInfo() prints the client name, contact and email
-     * @return clientInfo
+     * @param idCliente
+     * @return
      * @throws FileNotFoundException
      */
     public static String clientInfo(String idCliente) throws FileNotFoundException {
@@ -111,6 +112,11 @@ public class projetoFinal {
             }
         }
 
+        // Warning if clientInfo is empty
+        if (clientInfo.equals("")){
+            return clientInfo = "IdCliente not found!";
+        }
+
         return clientInfo;
     }
 
@@ -120,7 +126,7 @@ public class projetoFinal {
      * @throws FileNotFoundException
      */
     public static String[] mostExpensiveGame() throws FileNotFoundException {
-        // Declare array (using function readFile()) and Variables
+        // Declare array (using function readFile()) and declare variables
         String[][] array = readFile();
         int counter = 0, aux = 1;
         double max = Double.parseDouble(array[1][8]);
@@ -160,19 +166,20 @@ public class projetoFinal {
     public static String[] allGames() throws FileNotFoundException{
         // Declare array (using function readFile()) and Variables
         String[][] array = readFile();
-        int aux = 0, counter = 0, aux2 = 0;
+        int aux = 0, counter = 0;
+        boolean verify = false;
 
-        // Verify how many diferent games exists
+        // Verify how many different games exists
         for (int i = 1;i < array.length;i++){
             for (int j = i+1;j < array.length;j++){
                 if (array[i][7].equals(array[j][7])){
-                    aux++;
+                    verify = true;
                 }
             }
-            if (aux == 0){
+            if (!verify){
                 counter++;
             }
-            aux = 0;
+            verify = false;
         }
 
         String[] allGames = new String[counter];
@@ -180,14 +187,14 @@ public class projetoFinal {
         for (int i = 1;i < array.length;i++){
             for (int j = i+1;j < array.length;j++){
                 if (array[i][7].equals(array[j][7])){
-                    aux++;
+                    verify = true;
                 }
             }
-            if (aux == 0){
-                allGames[aux2] = array[i][7];
-                aux2++;
+            if (!verify){
+                allGames[aux] = array[i][7];
+                aux++;
             }
-            aux = 0;
+            verify = false;
         }
         return allGames;
     }
@@ -195,7 +202,7 @@ public class projetoFinal {
     /**
      * The function publisherExists() verify if the publisher given exists
      * @param publisher
-     * @return
+     * @return publisherExists
      * @throws FileNotFoundException
      */
     public static boolean publisherExists(String publisher) throws FileNotFoundException {
@@ -224,10 +231,8 @@ public class projetoFinal {
         String[][] array = readFile();
         String[] printedCategories = new String[array.length];
         String[] printedGames = new String[array.length];
-        int printedCategoriesCount = 0;
-        int printedGamesCount = 0;
+        int counter1 = 0, counter2 = 0;
 
-        // String to build the output
         String printGamesByPublisherAndCategories = "****** "+publisher.toUpperCase()+" ******\n";
 
         // Print categories and games for the given publisher
@@ -236,9 +241,9 @@ public class projetoFinal {
                 String category = array[i][6];
                 String game = array[i][7];
 
-                // Check if the category has already been printed
+                // Verify if the category has already been printed
                 boolean categoryAlreadyPrinted = false;
-                for (int j = 0;j < printedCategoriesCount;j++){
+                for (int j = 0;j < counter1;j++){
                     if (printedCategories[j].equals(category)){
                         categoryAlreadyPrinted = true;
                         break;
@@ -247,13 +252,13 @@ public class projetoFinal {
 
                 if (!categoryAlreadyPrinted){
                     printGamesByPublisherAndCategories += "----- "+category+" -----\n";
-                    printedCategories[printedCategoriesCount] = category;
-                    printedCategoriesCount++;
+                    printedCategories[counter1] = category;
+                    counter1++;
                 }
 
-                // Check if the game has already been printed
+                // Verify if the game has already been printed
                 boolean gameAlreadyPrinted = false;
-                for (int j = 0; j < printedGamesCount; j++){
+                for (int j = 0; j < counter2; j++){
                     if (printedGames[j].equals(game)) {
                         gameAlreadyPrinted = true;
                         break;
@@ -262,8 +267,8 @@ public class projetoFinal {
 
                 if (!gameAlreadyPrinted){
                     printGamesByPublisherAndCategories += "- "+game+"\n";
-                    printedGames[printedGamesCount] = game;
-                    printedGamesCount++;
+                    printedGames[counter2] = game;
+                    counter2++;
                 }
             }
         }
@@ -295,6 +300,7 @@ public class projetoFinal {
             }while (option < 0 || option > 5);
             switch (option){
                 case 1: // "Print the file GameStart.csv"
+                    System.out.println();
                     String[][] array1 = readFile();
                     System.out.println("***** Option 1 *****");
                     for (int i = 0;i < array1.length;i++){
@@ -303,17 +309,23 @@ public class projetoFinal {
                         }
                         System.out.println(" ");
                     }
+                    System.out.println();
                     break;
                 case 2: // "Print the number of sales and total value"
+                    System.out.println();
                     System.out.println("***** Option 2 *****");
                     System.out.println("Total sales: "+salesNumber());
                     System.out.println("Total sales value: "+salesValue());
+                    System.out.println();
                     break;
                 case 3: // "Print the total profit from all sales"
+                    System.out.println();
                     System.out.println("***** Option 3 *****");
                     System.out.println("Total profit: "+totalProfit());
+                    System.out.println();
                     break;
                 case 4: // "Given an idCliente print name, contact and email of the client"
+                    System.out.println();
                     String idCliente = "";
                     System.out.println("***** Option 4 *****");
                     do {
@@ -330,8 +342,10 @@ public class projetoFinal {
                         }
 
                     }while (idCliente.equals("0"));
+                    System.out.println();
                     break;
                 case 5: // "Print the most expensive game and the clients that bought it"
+                    System.out.println();
                     String[] array5 = mostExpensiveGame();
                     System.out.println("***** Option 5 *****");
                     for (int i = 0;i < array5.length;i++){
@@ -341,6 +355,7 @@ public class projetoFinal {
                             System.out.println("Client "+i+" : "+array5[i]);
                         }
                     }
+                    System.out.println();
                     break;
             }
         }while (option != 0);
@@ -371,13 +386,18 @@ public class projetoFinal {
             }while (option < 0 || option > 2);
             switch (option){
                 case 1: // Prints all the games that exists in the GameStart Shop
+                    System.out.println();
                     String[] array1 = allGames();
+                    System.out.println("***** Option 1 *****");
                     for (int i = 0;i < array1.length;i++){
-                        System.out.println(array1[i]);
+                        System.out.println((i+1)+" - "+array1[i]);
                     }
+                    System.out.println();
                     break;
                 case 2: // Prints all the games and categories, using the selected publisher
+                    System.out.println();
                     scanner.nextLine();
+                    System.out.println("***** Option 2 *****");
                     System.out.print("Enter the publisher name: ");
                     String publisher = scanner.nextLine();
 
@@ -394,6 +414,7 @@ public class projetoFinal {
 
                     String result = printGamesByPublisherAndCategories(publisher);
                     System.out.println(result);
+                    System.out.println();
                     break;
             }
         }while (option != 0);
@@ -433,6 +454,7 @@ public class projetoFinal {
                     }while (repeat);
                 }else if (userType.equals("cliente")){
                     clienteMenu();
+                    repeat = false;
                 }else{
                     System.out.print("Please, select Cliente or Admin: ");
                     repeat = true;
