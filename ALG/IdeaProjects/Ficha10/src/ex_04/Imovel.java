@@ -66,25 +66,40 @@ public class Imovel {
     public String mudarEstadoCasa(tipoCasa casaInserida){
         if (casaInserida.equals(ex_04.tipoCasa.CASA) & !casaInserida.equals(this.tipoCasa)){
             this.tipoCasa.equals(ex_04.tipoCasa.CASA);
-            return "Tipo de Imovél mudada com sucesso!";
+            return "Tipo de Imóvel mudada com sucesso!";
         }else if (casaInserida.equals(ex_04.tipoCasa.APARTAMENTO) & !casaInserida.equals(this.tipoCasa)){
             this.tipoCasa.equals(ex_04.tipoCasa.APARTAMENTO);
-            return "Tipo de Imovél mudada com sucesso!";
+            return "Tipo de Imóvel mudada com sucesso!";
         }else if (casaInserida.equals(ex_04.tipoCasa.MANSÃO) & !casaInserida.equals(this.tipoCasa)){
             this.tipoCasa.equals(ex_04.tipoCasa.MANSÃO);
-            return "Tipo de Imovél mudada com sucesso!";
+            return "Tipo de Imóvel mudada com sucesso!";
         }else{
-            return "O imovél já possuí esse tipo de estado!";
+            return "O Imóvel já possuí esse tipo de estado!";
         }
     }
 
     // Método exibir detalhes da casa
     public void imprimirDescricao(){
-        System.out.println("Descrição do Imovél: ");
+        System.out.println("Descrição do Imóvel: ");
         System.out.println("Rua: "+this.rua);
         System.out.println("Número de Porta: "+this.numPorta);
         System.out.println("Cidade: "+this.cidade);
-        System.out.println("Tipo de Imovél: "+this.tipoCasa);
-        System.out.println("");
+        System.out.println("Tipo de Imóvel: "+this.tipoCasa);
+        System.out.println("Acabamento: "+this.acabamento);
+        System.out.println("Área: "+this.area);
+        System.out.println("Número de quartos: "+this.numQuartos);
+        System.out.println("Número de Casas de Banho: "+this.numCasaDeBanho);
+        System.out.println("Área da Piscina: "+this.areaPiscina);
     }
+
+    // Método compararImóveis
+    public Imovel compararImoveis (Imovel imovel1){
+        if (imovel1.calcularValorImovel()>this.calcularValorImovel()){
+            return imovel1;
+        }else{
+            return this;
+        }
+    }
+
+
 }
