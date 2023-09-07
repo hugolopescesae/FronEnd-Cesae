@@ -2,17 +2,15 @@ let button = document.getElementById("button1");
 let body = document.querySelector("body");
 let p;
 
-button.addEventListener("click", paragraph);
+button.addEventListener("click", paragraph, {once:true});
 
 function paragraph() {
     p = document.createElement("p");
     p.innerText = "É só mais um esforço para o curso de Front-end e a seguir vou de férias";
     body.appendChild(p);
-
-    
 }
 
-button.addEventListener("click", createbuttons);
+button.addEventListener("click", createbuttons, {once:true});
 
 function createbuttons() {
     let createButton1 = document.createElement("button");
@@ -36,7 +34,7 @@ function createbuttons() {
 
     function decreaseSize(){
         let tamanhoAtual = window.getComputedStyle(p).fontSize;
-        let tamanhoNovo = parseFloat(tamanhoAtual) * 0.8; // Aumenta em 20%
+        let tamanhoNovo = parseFloat(tamanhoAtual) * 0.8; // Diminui em 20%
         p.style.fontSize = tamanhoNovo + "px";
         p.style.textAlign = "right";
     }

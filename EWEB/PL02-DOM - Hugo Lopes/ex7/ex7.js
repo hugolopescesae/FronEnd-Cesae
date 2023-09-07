@@ -15,4 +15,4 @@ document.addEventListener("keydown", function(event) {
       event.preventDefault();
       alert("Não te esqueças de entregar o trabalho.");
     }
-  });
+});
