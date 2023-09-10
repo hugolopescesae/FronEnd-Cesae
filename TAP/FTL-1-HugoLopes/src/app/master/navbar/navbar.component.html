@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">Hugo Lopes</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        (click)="noListNav.toggle()"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div
+        class="collapse navbar-collapse"
+        id="navbarNavAltMarkup"
+        mdbCollapse
+        #noListNav="mdbCollapse"
+      >
+        <div class="navbar-nav">
+          <a class="nav-link" routerLink="">Home</a>
+          <a class="nav-link" routerLink="Gallery">Gallery</a>
+          <a class="nav-link" routerLink="Blog">Blog</a>
+          <a class="nav-link" routerLink="ContactUs">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>

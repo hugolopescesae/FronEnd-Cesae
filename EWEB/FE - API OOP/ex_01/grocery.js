@@ -11,3 +11,24 @@ form.addEventListener("submit", function (e){
     form.reset();
     console.log("Submetido a tempo!")
 })
+
+const loadStarWarsFilm = async () => {
+    const res = await fetch("https://swapi.dev/api/films/1");
+    const data = await res.json();
+    console.log(data);
+
+    let filmName = document.createElement("h1");
+    filmName.innerText = data.title;
+
+    document.body.append(filmName);
+}
+
+loadStarWarsFilm();
+
+String.prototype.toLowerAndWeekend = function (){
+    return `Estamos quase de fim de semana ${this.toLowerCase()}`
+}
+
+let myName = "Hugo";
+
+console.log(myName.toLowerAndWeekend());
