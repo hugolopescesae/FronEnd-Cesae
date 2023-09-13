@@ -1,21 +1,26 @@
 package ex_05;
 
 public class Agenda {
-    // Instanciar array
-    String[] arrayPessoas = new String[3];
-    int counter = 0;
+    // Array guardar pessoas e variaveis
+    Pessoa [] arrayPessoas;
+    private int counter = 0;
 
-    // Método para adicionar pessoas a um array
-    public String guardarPessoas(){
-        arrayPessoas[counter] =
-        counter++;
+    // Contructor
+    public Agenda() {
+        arrayPessoas = new Pessoa[50];
+    }
+
+    // Adicionar pessoa ao arrayPessoas
+    public String guardarPessoas(Pessoa pessoa) {
+        arrayPessoas[this.counter++] = pessoa;
         return "Pessoa adicionada com sucesso!";
     }
 
-    // Método imprimirPessoas
-    public void imprimirPessoas(){
-        for (int i = 0;i < arrayPessoas.length;i++){
-            System.out.println(arrayPessoas[i]);
+    // Mostrar pessoas do array pessoas
+    public void mostrarPessoas() {
+        for (int i = 0;i < counter;i++){
+            arrayPessoas[i].exibirDetalhes();
         }
     }
+
 }
