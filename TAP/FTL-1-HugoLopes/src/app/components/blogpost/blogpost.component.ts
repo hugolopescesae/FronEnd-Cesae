@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-blogpost',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./blogpost.component.scss']
 })
 export class BlogpostComponent {
-
+  @Input() h5: string = ""
+  @Input() p1: string = ""
+  @Input() p2: string = ""
+  @Input() a : string = ""
 }
