@@ -5,10 +5,27 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Poppins;
+    font-family: Poppins, sans-serif;
 }
 
 /* Personalised colors */
+.bg-navyBlue{
+    background-color: #053B50;
+}
 
+.bg-blue{
+    background-color: #176B87;
+}
+
+.bg-oceanBlue{
+    background-color: #64CCC5;
+}
 
 /* Navbar commands */
+
+
+/* Banner commands */
+.banner-size {
+    max-width: 100%;
+    height: auto;
+}
