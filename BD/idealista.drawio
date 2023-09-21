@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net" modified="2023-09-20T16:18:58.327Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="UxWy0j_KXAgbXu8LIg6r" version="21.7.5" type="device">
+  <diagram name="Página-1" id="KrYaN7hqSou8XNiX-8Vt">
+    <mxGraphModel dx="1647" dy="897" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2Tzba9ahhQXmyEIajL05-2" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="187" y="310" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-13" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="2Tzba9ahhQXmyEIajL05-8" target="2Tzba9ahhQXmyEIajL05-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="2Tzba9ahhQXmyEIajL05-8" target="2Tzba9ahhQXmyEIajL05-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-15" value="&amp;lt;&amp;lt;includes&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="2Tzba9ahhQXmyEIajL05-14">
+          <mxGeometry x="-0.1923" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-8" value="Pesquisar Imóvel" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="190" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="2Tzba9ahhQXmyEIajL05-9" target="2Tzba9ahhQXmyEIajL05-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-57" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="2Tzba9ahhQXmyEIajL05-9" target="2Tzba9ahhQXmyEIajL05-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-9" value="Publicar&amp;nbsp; Anúncio" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="490" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-10" value="Tipo de Imóvel" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="487" y="190" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-19" value="Pagamento" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="490" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=0;" edge="1" parent="1" source="2Tzba9ahhQXmyEIajL05-24" target="2Tzba9ahhQXmyEIajL05-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-24" value="Cliente&lt;br&gt;(com sessão)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="187" y="550" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-27" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="2Tzba9ahhQXmyEIajL05-26" target="2Tzba9ahhQXmyEIajL05-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-28" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="2Tzba9ahhQXmyEIajL05-27">
+          <mxGeometry x="-0.003" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-26" value="Localização" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="207" y="70" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-32" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="2Tzba9ahhQXmyEIajL05-31" target="2Tzba9ahhQXmyEIajL05-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-31" value="Contactar Imóvel" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="305" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-35" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="2Tzba9ahhQXmyEIajL05-34" target="2Tzba9ahhQXmyEIajL05-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-34" value="Favoritos" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="580" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-38" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="2Tzba9ahhQXmyEIajL05-36" target="2Tzba9ahhQXmyEIajL05-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-36" value="Histórico de Vendas/Compras" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="670" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-52" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="2Tzba9ahhQXmyEIajL05-51" target="2Tzba9ahhQXmyEIajL05-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-51" value="KeyWords" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="367" y="70" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;dashed=1;endArrow=none;endFill=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="2Tzba9ahhQXmyEIajL05-53" target="2Tzba9ahhQXmyEIajL05-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="487" y="410" />
+              <mxPoint x="487" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-53" value="Operação" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="390" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="2Tzba9ahhQXmyEIajL05-56" value="&amp;lt;&amp;lt;includes&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="487.0033333333303" y="330" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
