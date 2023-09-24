@@ -1,73 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
+
 <head>
     <!-- Meta Tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DogWorld - Sobre Nós</title>
-    <!-- Bootstrap Imports -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer></script>
-    <!-- JavaScript/CSS/Favicon file Import -->
+    <title>DogWorld</title>
+    <!-- BootStrap imports -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <!-- CSS/JS/Favicon imports -->
     <link rel="stylesheet" href="../CSS/style.css">
-    <link rel="shortcut icon" href="Favicon/" type="image/x-icon">
-    <script src="JS/script.js" defer></script>
+    <script src="../JS/script.js" defer></script>
+    <link rel="shortcut icon" href="../Images/Favicon/favicon.png" type="image/x-icon">
 </head>
+
 <body>
-    <!-- Navbar commands -->
-    <nav class="navbar navbar-expand-md bg-secondary navbar-dark fixed-top">
-      <div class="container">
-          <a href="index.html" class="navbar-brand"><b><em>DogWorld</em></b></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navmenu">
-              <ul class="navbar-nav">
-                  <li class="nav-item">
-                      <a href="../index.html" class="nav-link">Início</a>
-                  </li>
-                  <li class="nav-item">
-                      <a href="../Pages/sobrenos.html" class="nav-link">Sobre Nós</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../Pages/servicos.html" class="nav-link">Serviços</a>
-                </li>
-                  <li class="nav-item">
-                      <a href="../Pages/guiaderaças.html" class="nav-link">Guia de Raças</a>
-                  </li>
-                  <li class="nav-item">
-                      <a href="../Pages/faqs.html" class="nav-link">FAQ's</a>
-                  </li>
-                  <li class="nav-item">
-                      <a href="../Pages/contactos.html" class="nav-link">Contactos</a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-    </nav>
-    <!-- Carousel Commands -->
-    <section>
-        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="../Images/index/bannerImage.png" class="d-block w-100" alt="...">
+    <!-- Navbar Commands -->
+    <section class="navbar">
+        <nav class="navbar navbar-expand-md bg-color-darkBlue navbar-color fixed-top">
+            <div class="container-fluid container">
+                <a class="navbar-brand text-color-footer-navbar"><b><i>DogWorld</i></b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="../index.html">Home</a>
+                        <a class="nav-link active" href="sobrenos.html">Sobre Nós</a>
+                        <a class="nav-link" href="servicos.html">Serviços</a>
+                        <a class="nav-link" href="guiaderacas.html">Guia de Raças</a>
+                        <a class="nav-link" href="faqs.html">FAQ's</a>
+                        <a class="nav-link" href="contactos.html">Contactos</a>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="../Images/index/bannerImage.png" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="../Images/index/bannerImage.png" class="d-block w-100" alt="...">
             </div>
+        </nav>
+    </section>
+    <!-- Banner Image commands -->
+    <section class="bannerImage mb-3">
+        <img class="banner" src="../Images/HomePage/bannerImage.png" alt="">
+    </section>
+    <!-- About Us Commands -->
+    <section class="aboutUs mb-3">
+        <div class="container">
+            <h2 class="text-center">Equipa de Trabalho</h2>
+            <p class="text-center">Conheça a Equipa: Hugo Lopes e Niko <br>
+
+                Na Dogworld, acreditamos que a melhor equipa nem sempre é composta apenas por seres humanos. Apresentamos-lhe a dupla dinâmica que está sempre pronta para cuidar do seu cão e proporcionar experiências excecionais de cuidados caninos.
+                
+                Hugo Lopes - O Cuidador Devoto:
+                Hugo é um amante de cães apaixonado e dedicado. Com anos de experiência em Dog Sitting e Dog Walking, ele sabe como criar um ambiente seguro e amoroso para o seu cão quando você não pode estar presente. Hugo é conhecido pela sua paciência, empatia e compromisso com o bem-estar dos cães. O seu objetivo é fazer com que cada cão se sinta amado e cuidado como se fosse seu próprio.
+                
+                Niko - O Companheiro Fiel:
+                Niko é mais do que um cão de estimação; ele é o parceiro de trabalho de Hugo. Este adorável cão não apenas oferece alegria e companhia, mas também é um membro essencial da equipa. Niko é gentil, amigável e está sempre pronto para fazer amizade com outros cães, tornando a experiência de creche para cães um momento divertido e seguro para todos.
+                
+                Juntos, Hugo Lopes e Niko formam uma equipa imbatível de cuidadores caninos, prontos para atender às necessidades do seu cão com carinho, profissionalismo e dedicação. Não apenas cuidamos de cães, nós amamo-los. Confie na nossa equipa para garantir que o seu cão receba o tratamento que merece.
+            </p>
+            <div class="row text-center justify-content-center">
+                <div class="col-3">
+                    <div class="card">
+                        <img src="../Images/SobreNosPage/criador1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Hugo Lopes, Criador DogWorld</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+                        <img src="../Images/SobreNosPage/criador2.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Niko, ajudante da DogWorld</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-center mt-3">Localizaçao da Empresa</h2>
+            <p></p>
         </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    </section>
+    <!-- Location Commands -->
+    <section class="location mb-3">
+        <div class="container">
+            <img class="banner" src="../Images/SobreNosPage/localizacao.png" alt="">
         </div>
     </section>
 </body>
+
 </html>

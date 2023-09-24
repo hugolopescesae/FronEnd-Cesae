@@ -1,31 +1,44 @@
-/* Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Font Imports */
+@import url('https://fonts.cdnfonts.com/css/poppins');
 
-/* Selector all commands */
+/* Selector All */
 * {
     margin: 0;
     padding: 0;
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Personalised colors */
-.bg-navyBlue{
-    background-color: #053B50;
+/* Personalised Colors */
+:root {
+    --darkBlue: #053B50;
+    --normalBlue: #176B87;
+    --clearBlue: #64CCC5;
+    --normalGrey:#EEEEEE;
 }
 
-.bg-blue{
-    background-color: #176B87;
+/* Navbar and Footer Commands */
+.bg-color-darkBlue {
+    background-color: var(--darkBlue);
 }
 
-.bg-oceanBlue{
-    background-color: #64CCC5;
+.bg-color-normalBlue {
+    background-color: var(--normalBlue);
 }
 
-/* Navbar commands */
+.text-color-footer-navbar {
+    color: var(--normalGrey);
+}
 
+.navbar-nav .nav-link {
+    color: var(--normalGrey)
+}
 
-/* Banner commands */
-.banner-size {
-    max-width: 100%;
+/* HomePage commands */
+.banner {
+    width: 100%;
     height: auto;
+}
+
+.align-text-p {
+    text-align: justify
 }

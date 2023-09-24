@@ -1,41 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Meta Tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DogWorld</title>
+    <!-- BootStrap imports -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <!-- CSS/JS/Favicon imports -->
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/script.js" defer></script>
+    <link rel="shortcut icon" href="../Images/Favicon/favicon.png" type="image/x-icon">
 </head>
+
 <body>
-   <!-- Navbar commands -->
-   <nav class="navbar navbar-expand-md bg-secondary navbar-dark fixed-top">
-    <div class="container">
-        <a href="index.html" class="navbar-brand"><b><em>DogWorld</em></b></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navmenu">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../Pages/sobrenos.html" class="nav-link">Sobre Nós</a>
-                </li>
-                <li class="nav-item">
-                  <a href="../Pages/servicos.html" class="nav-link">Serviços</a>
-              </li>
-                <li class="nav-item">
-                    <a href="../Pages/guiaderaças.html" class="nav-link">Guia de Raças</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../Pages/faqs.html" class="nav-link">FAQ's</a>
-                </li>
-                <li class="nav-item">
-                    <a href="../Pages/contactos.html" class="nav-link">Contactos</a>
-                </li>
-            </ul>
+    <!-- Navbar Commands -->
+    <section class="navbar">
+        <nav class="navbar navbar-expand-md bg-color-darkBlue navbar-color fixed-top">
+            <div class="container-fluid container">
+                <a class="navbar-brand text-color-footer-navbar"><b><i>DogWorld</i></b></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="../index.html">Home</a>
+                        <a class="nav-link" href="sobrenos.html">Sobre Nós</a>
+                        <a class="nav-link" href="servicos.html">Serviços</a>
+                        <a class="nav-link" href="guiaderacas.html">Guia de Raças</a>
+                        <a class="nav-link active" href="faqs.html">FAQ's</a>
+                        <a class="nav-link" href="contactos.html">Contactos</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- Banner Image commands -->
+    <section class="bannerImage">
+        <img class="banner" src="../Images/HomePage/bannerImage.png" alt="">
+    </section>
+    <!-- Introduction Commands -->
+    <section class="Introduction mt-3">
+        <h2 class="text-center">Introdução</h2>
+        <div class="container">
+            <p class="text-center">
+                Bem-vindo à nossa Página de Perguntas Frequentes da Dogworld - Respostas para Cuidar do Seu Cão! <br>
+
+                Estamos dedicados a simplificar a vida dos amantes de cães em Portugal, fornecendo uma plataforma
+                abrangente para encontrar uma variedade de serviços de cuidados caninos, desde Dog Sitting até Dog
+                Training. Entendemos que cuidar do seu cão é uma prioridade, e é por isso que criamos esta página para
+                responder às perguntas mais comuns que os proprietários de cães podem ter sobre a Dogworld. <br>
+
+                Aqui, você encontrará informações úteis sobre como encontrar os melhores cuidadores para o seu cão,
+                entender os serviços disponíveis e garantir que seu amigo peludo receba o melhor tratamento possível.
+                Nossa missão é tornar a experiência de cuidar do seu cão simples, segura e agradável. <br>
+
+                Se você não encontrar a resposta que procura, não hesite em nos contatar. Estamos aqui para ajudar você
+                e seu cão a desfrutarem de uma vida feliz e saudável juntos. Explore as perguntas frequentes abaixo e
+                comece a descobrir como a Dogworld pode ser uma solução valiosa para as necessidades do seu cão! <br>
+            </p>
         </div>
-    </div>
-  </nav> 
+    </section>
+    <!-- Faqs Questions Commands -->
+    <section class="faqsQuestions">
+        <div class="container">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item"> <!-- 1 QUESTION -->
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            1 - O que é a Dogworld e o que oferece aos proprietários de cães
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            A Dogworld é um website dedicado a conectar proprietários de cães a uma variedade de
+                            serviços de cuidados caninos, incluindo Dog Sitting, Dog Walking, Creche para cães, Dog
+                            Grooming e Dog Training. Nosso objetivo é facilitar a busca e contratação de serviços
+                            confiáveis para atender às necessidades do seu cão.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item"> <!-- 2 QUESTION -->
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            2 - Como posso encontrar um serviço de Dog Sitting na minha área através da Dogworld?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Para encontrar um serviço de Dog Sitting na sua área, basta usar nossa função de pesquisa.
+                            Insira sua localização e as datas desejadas, e apresentaremos uma lista de prestadores de
+                            serviços disponíveis para cuidar do seu cão enquanto você estiver ausente.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item"> <!-- 3 QUESTION -->
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            3 - Quais são os benefícios de contratar um Dog Walker através da Dogworld?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Ao contratar um Dog Walker da Dogworld, você proporciona ao seu cão a oportunidade de
+                            exercitar-se regularmente e socializar com outros cães. Isso é essencial para a saúde física
+                            e emocional do seu animal de estimação.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item"> <!-- 4 QUESTION -->
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            4 - Como funciona a Creche para cães da Dogworld e como posso inscrever o meu cão?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Nossa Creche para cães oferece um ambiente seguro e divertido para os cães brincarem e
+                            interagirem com outros. Para inscrever o seu cão, entre em contato com os prestadores de
+                            serviços listados em nosso website e discuta os detalhes, como horários e requisitos de
+                            inscrição.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item"> <!-- 5 QUESTION -->
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            5 - O que devo esperar de um serviço de Dog Grooming disponível na Dogworld?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Os serviços de Dog Grooming oferecidos na Dogworld incluem cuidados com a pelagem, banho,
+                            tosquia, corte de unhas e limpeza de ouvidos. O objetivo é manter seu cão com uma aparência
+                            saudável e bem cuidada.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item"> <!-- 6 QUESTION -->
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            6 - Quais são os serviços de Dog Training oferecidos pela Dogworld e como posso inscrever o meu
+                            cão?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Nossos serviços de Dog Training abrangem desde o treinamento básico de obediência até o
+                            treinamento especializado para problemas de comportamento. Você pode entrar em contato com
+                            treinadores profissionais em nosso website para discutir as necessidades do seu cão e
+                            agendar sessões de treinamento.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item"> <!-- 7 QUESTION -->
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            7 - Como posso entrar em contato com os profissionais de cuidados caninos listados na Dogworld?
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Cada prestador de serviços listado na Dogworld terá suas informações de contato disponíveis
+                            em seu perfil. Você pode usar essas informações para entrar em contato diretamente com eles.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item"> <!-- 8 QUESTION -->
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            8 - Quais são os critérios de seleção para os prestadores de serviços de cuidados caninos na
+                            Dogworld?
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Na Dogworld, selecionamos prestadores de serviços com base em critérios rigorosos, incluindo
+                            experiência, histórico de cuidado com cães, e avaliações positivas de clientes anteriores.
+                            Mantemos um padrão elevado para garantir a qualidade e confiabilidade dos serviços
+                            oferecidos.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item"> <!-- 9 QUESTION -->
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            9 - Como funcionam as avaliações e avaliações de prestadores de serviços na Dogworld?
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Após usar um serviço, os clientes têm a oportunidade de deixar avaliações e comentários
+                            sobre sua experiência com o prestador. Isso ajuda outros proprietários de cães a tomar
+                            decisões informadas ao escolher um serviço.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item"> <!-- 10 QUESTION -->
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                            10 - É seguro usar a Dogworld para encontrar serviços de cuidados caninos para o meu cão?
+                        </button>
+                    </h2>
+                    <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Sim, a Dogworld se esforça para fornecer uma plataforma segura e confiável. No entanto,
+                            recomendamos sempre verificar as credenciais e ler avaliações de outros clientes antes de
+                            escolher um prestador de serviços. Se tiver alguma preocupação, não hesite em nos contatar
+                            para assistência adicional.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>
