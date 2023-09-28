@@ -1,0 +1,102 @@
+<mxfile host="app.diagrams.net" modified="2023-09-27T13:11:59.525Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="MXjdtuoFfuNRhS9NcEvg" version="21.8.0" type="device">
+  <diagram name="Página-1" id="9qSDDXZSDf9FU4XjWByw">
+    <mxGraphModel dx="1647" dy="897" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cav8oMXvE9kT82yOOXPT-1" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="187" y="310" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="cav8oMXvE9kT82yOOXPT-5" target="cav8oMXvE9kT82yOOXPT-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;endArrow=classic;endFill=1;dashed=1;" edge="1" parent="1" source="cav8oMXvE9kT82yOOXPT-5" target="cav8oMXvE9kT82yOOXPT-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-4" value="&amp;lt;&amp;lt;includes&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cav8oMXvE9kT82yOOXPT-3">
+          <mxGeometry x="-0.1923" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-5" value="Pesquisar Livros" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="190" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-6" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="cav8oMXvE9kT82yOOXPT-8" target="cav8oMXvE9kT82yOOXPT-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-7" value="includes" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="cav8oMXvE9kT82yOOXPT-8" target="cav8oMXvE9kT82yOOXPT-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-8" value="Comprar Livro" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="490" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-9" value="Género" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="487" y="190" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-10" value="Pagamento" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="490" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=0;" edge="1" parent="1" source="cav8oMXvE9kT82yOOXPT-12" target="cav8oMXvE9kT82yOOXPT-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-12" value="Cliente&lt;br&gt;(com sessão)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="187" y="550" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="cav8oMXvE9kT82yOOXPT-19" target="cav8oMXvE9kT82yOOXPT-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-19" value="Favoritos" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="580" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-20" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="cav8oMXvE9kT82yOOXPT-21" target="cav8oMXvE9kT82yOOXPT-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-21" value="Histórico de Vendas/Compras" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="670" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-22" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="cav8oMXvE9kT82yOOXPT-23" target="cav8oMXvE9kT82yOOXPT-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-23" value="KeyWords" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="50" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;dashed=1;endArrow=none;endFill=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="cav8oMXvE9kT82yOOXPT-25" target="cav8oMXvE9kT82yOOXPT-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="487" y="410" />
+              <mxPoint x="487" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-25" value="Ebook ou Livro" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="277" y="290" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-26" value="&amp;lt;&amp;lt;includes&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="487.0033333333303" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-29" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="cav8oMXvE9kT82yOOXPT-28" target="cav8oMXvE9kT82yOOXPT-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-30" value="&amp;lt;&amp;lt;includes&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cav8oMXvE9kT82yOOXPT-29">
+          <mxGeometry x="-0.0447" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-28" value="Autor" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="70" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-32" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="cav8oMXvE9kT82yOOXPT-31" target="cav8oMXvE9kT82yOOXPT-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-33" value="&amp;lt;&amp;lt;includes&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cav8oMXvE9kT82yOOXPT-32">
+          <mxGeometry x="-0.079" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cav8oMXvE9kT82yOOXPT-31" value="Editora" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="70" width="140" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

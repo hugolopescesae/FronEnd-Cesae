@@ -24,7 +24,6 @@ public class Catalogo {
     // Cacular preço aviões
     public void calcularPrecoAvioes(){
         for (int i = 0;i <avioes.size();i++){
-            avioes.get(aviao.get)
         }
     }
 }
