@@ -23,6 +23,9 @@ import { FooterComponent } from './master/footer/footer.component';
 import { NavbarComponent } from './master/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TodoComponent } from './components/todo/todo.component';
+import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { FormsComponent } from './pages/forms/forms.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,9 +33,12 @@ import { TodoComponent } from './components/todo/todo.component';
     FooterComponent,
     NavbarComponent,
     HomeComponent,
-    TodoComponent
+    TodoComponent,
+    AddTodoComponent,
+    FormsComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     MdbAccordionModule,
