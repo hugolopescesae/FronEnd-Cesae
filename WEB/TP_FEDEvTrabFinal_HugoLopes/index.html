@@ -43,8 +43,28 @@
         </nav>
     </section>
     <!-- Banner Image Commands -->
-    <section class="bannerImage mb-3">
-        <img class="banner" src="Images/HomePage/bannerImage.png" alt="" srcset="">
+    <section class="carousel mb-3">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Images/HomePage/carousel (1).png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="Images/HomePage/carousel (2).jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="Images/HomePage/carousel (3).jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
     </section>
     <!-- AboutUsHomePage Commands -->
     <section class="aboutUsHomePage mb-3">
@@ -143,7 +163,7 @@
     <!-- Footer Commands -->
     <section class="footer">
         <div class="bg-color-darkBlue">
-            <footer class="py-3 my-4">
+            <footer class="py-3">
               <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item"><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
                 <li class="nav-item"><a href="Pages/sobrenos.html" class="nav-link px-2 text-white">Sobre Nós</a></li>

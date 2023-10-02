@@ -1,6 +1,6 @@
 /* Font Imports */
 @import url('https://fonts.cdnfonts.com/css/poppins');
-
+       
 /* Selector All */
 * {
     margin: 0;
@@ -16,6 +16,7 @@
     --normalGrey:#EEEEEE;
 }
 
+
 /* Navbar and Footer Commands */
 .bg-color-darkBlue {
     background-color: var(--darkBlue);
@@ -30,7 +31,15 @@
 }
 
 .navbar-nav .nav-link {
-    color: var(--normalGrey)
+    color: var(--normalGrey);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--clearBlue);
+}
+
+.navbar.navbar-expand-md.bg-color-darkBlue.navbar-color.fixed-top .navbar-brand {
+    color: var(--clearBlue);
 }
 
 /* HomePage commands */
@@ -41,4 +50,10 @@
 
 .align-text-p {
     text-align: justify
+}
+
+/* Banner Video commands */
+.bannerVideo {
+    max-width: 100%;
+    height: auto;
 }
