@@ -1,0 +1,6 @@
+Descrição do Projeto:
+O meu projeto consiste num website sobre Cães, que tem como objetivo dar um apoio aos seus donos, com informações de Guias de Raças, Serviços disponibilizados pela DogWorld, Eventos e Parcerias.
+
+
+Autoavaliação:
+Com este projeto final de HTML, CSS e Bootstrap, consolidei todas as bases dadas em aula e apliquei todos os conhecimentos adquiridos. Com base no que referido anteriormente, avalio-me entre 18 e 20.
