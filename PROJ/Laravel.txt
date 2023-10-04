@@ -1,3 +1,0 @@
-db: laravel_task_manager
-user: user_laravel_task_manager
-pass: ciMe5i7EMIGiQIkuc3Y6Fe6atiLiMo
