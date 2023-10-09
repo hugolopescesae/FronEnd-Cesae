@@ -1,0 +1,26 @@
+Função simuladora: 
+
+for - numDias
+	for - momentosDias = 3
+		// Guardar Animais num arrayAniamis
+		Acontecimentos - Entre 1 e 4
+			1 - Planta
+			2 - Animal
+			3 - Inseto
+			4 - Catástrofe Natural
+
+			1 - Random number entre 1 e 3
+				1 - plantaAbanaComVento
+				2 - plantaBebe
+				3 - plantaComeInseto (só se for PlantaComeInsetos)
+			2 - Random number entre 1 e 4
+				1 - animalFazBarulho
+				2 - animalMovimenta
+				3 - animalBebe
+				4 - animalCome
+			3 - Invoca InsetoChateia
+			4 - Random number entre 1 e 3
+				1 - Seca: Diminui a água para metade
+				2 - Chuvas: Aumenta água para o dobro
+				3 - Erupçãp Vulcânica: Morrem metade das plantas e metade dos animais
+		
