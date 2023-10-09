@@ -1,26 +1,23 @@
 <div class="container w-50 mt-5 mb-5">
-  <form>
-    <!-- Title input -->
-    <mdb-form-control class="mb-4">
-      <input mdbInput type="text" id="form1Example1" class="form-control" />
-      <label mdbLabel class="form-label" for="form1Example1">Title</label>
-    </mdb-form-control>
+  <h1 class="text-center">AddTodo</h1>
+  <!-- Title input -->
+  <mdb-form-control class="mb-4">
+    <input [(ngModel)]="todo.title" mdbInput type="text" id="form1Example1" class="form-control" />
+    <label mdbLabel class="form-label" for="form1Example1">Title</label>
+  </mdb-form-control>
 
-    <!-- Description input -->
-    <mdb-form-control class="mb-4">
-      <input mdbInput type="text" id="form1Example2" class="form-control" />
-      <label mdbLabel class="form-label" for="form1Example2">Description</label>
-    </mdb-form-control>
+  <!-- Description input -->
+  <mdb-form-control class="mb-4">
+    <input [(ngModel)]="todo.description" mdbInput type="text" id="form1Example2" class="form-control" />
+    <label mdbLabel class="form-label" for="form1Example2">Description</label>
+  </mdb-form-control>
 
-    <!-- IsDone input -->
-    <div class="form-check">
-      <input mdbCheckbox class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-      <label class="form-check-label" for="flexCheckDefault">
-        Done
-      </label>
-    </div>
+  <!-- IsDone input -->
+  <div class="form-check">
+    <input mdbCheckbox class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+    <label class="form-check-label" for="flexCheckDefault">Done</label>
+  </div>
 
-    <!-- Submit button -->
-    <button mdbRipple type="button" class="btn btn-primary btn-block">Add Todo</button>
-  </form>
+  <!-- Submit button -->
+  <button mdbRipple type="button" class="btn btn-primary btn-block" (click)="addTodo()">Add Todo</button>
 </div>

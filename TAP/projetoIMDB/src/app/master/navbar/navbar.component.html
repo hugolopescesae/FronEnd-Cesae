@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-dark rounded-bottom" style="background-color: #04364A;">
+    <div class="container">
+        <a class="navbar-brand" routerLink="">Projeto IMDB</a>
+        <button class="navbar-toggler" type="button" (click)="noListNav.toggle()" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" mdbCollapse #noListNav="mdbCollapse">
+            <div class="navbar-nav">
+                <a class="nav-link active" routerLink="">Home</a>
+                <a class="nav-link active" routerLink="#">Next</a>
+            </div>
+        </div>
+    </div>
+</nav>

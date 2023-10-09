@@ -19,27 +19,20 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FooterComponent } from './master/footer/footer.component';
 import { NavbarComponent } from './master/navbar/navbar.component';
+import { FooterComponent } from './master/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
-import { TodoComponent } from './components/todo/todo.component';
-import { AddTodoComponent } from './components/add-todo/add-todo.component';
-import { FormsComponent } from './pages/forms/forms.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
     NavbarComponent,
+    FooterComponent,
     HomeComponent,
-    TodoComponent,
-    AddTodoComponent,
-    FormsComponent
   ],
   imports: [
-    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     MdbAccordionModule,
@@ -58,7 +51,7 @@ import { FormsModule } from '@angular/forms';
     MdbTooltipModule,
     MdbValidationModule,
     BrowserAnimationsModule,
-    FormsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

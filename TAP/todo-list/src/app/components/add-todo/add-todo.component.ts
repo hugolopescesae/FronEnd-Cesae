@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Todo } from 'src/app/models/todo.model';
+import { TodoService } from '../todo/todo.service';
 
 @Component({
   selector: 'app-add-todo',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-todo.component.scss']
 })
 export class AddTodoComponent {
+  todo: Todo = {
+    title: "",
+    description: "",
+    isDone: false
+  }
 
+  constructor(private todoService: TodoService) {}
+
+  addTodo(): void {
+    this.todoService.addTodo(this.todo).subscribe()
+  }
 }
