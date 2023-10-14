@@ -1,0 +1,33 @@
+<div class="container mt-3 mb-3">
+    <div class="mt-3 mb-3">
+        <h1>Pesquisar Filme:</h1>
+        <mdb-form-control class="mb-4">
+            <input [(ngModel)]="searchMovie" mdbInput type="text" id="form1Example1" class="form-control" />
+            <label mdbLabel class="form-label" for="form1Example1">Nome do Filme</label>
+        </mdb-form-control>
+        <button mdbRipple type="button" class="btn btn-primary btn-block" (click)="getMovieByTitle()">Pesquisar Filme</button>
+    </div>
+
+    <div class="row">
+        <h1>Movies: </h1>
+        <div class="col-3 mb-3" *ngFor="let movie of movies">
+            <div class="card">
+                <img [src]="movie.Poster" class="card-img-top" alt="Movie" />
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie.Title }}</h5>
+                    <p class="card-text">Tipo: {{ movie.Type }}</p>
+                    <p class="card-text">Ano: {{ movie.Year }}</p>
+                    <p class="card-text">imdbID: {{ movie.imdbID }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav aria-label="...">
+        <ul class="pagination pagination-md">
+          <li (click)="getMovieByTitle()" class="page-item"><a class="page-link" href="#">1</a></li>
+          <li (click)="getMovieByTitle(2)" class="page-item"><a class="page-link" href="#">2</a></li>
+          <li (click)="getMovieByTitle(3)" class="page-item"><a class="page-link" href="#">3</a></li>
+        </ul>
+      </nav>
+</div>

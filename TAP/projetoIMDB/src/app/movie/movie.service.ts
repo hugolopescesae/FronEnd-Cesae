@@ -14,8 +14,8 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
-  getMovieByTitle(title: string): Observable<MovieSearchResponse> { // A função procura um filme pelo título e retorna todos resultados da pesquisa
-    return this.http.get<MovieSearchResponse>(`${this.domain}?apikey=${this.apikey}&s=${title}`)
+  getMovieByTitle(title: string, page: number): Observable<MovieSearchResponse> { // A função procura um filme pelo título e retorna todos resultados da pesquisa
+    return this.http.get<MovieSearchResponse>(`${this.domain}?apikey=${this.apikey}&s=${title}&page=${page}`)
   }
   
 }

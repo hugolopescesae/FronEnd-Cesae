@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c661ea1c-f850-4d01-b362-f1704ff75521" name="Changes" comment="" />
+    <list default="true" id="c661ea1c-f850-4d01-b362-f1704ff75521" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/TP_POO_HugoLopes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TP_POO_HugoLopes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TAP/projetoIMDB/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../TAP/projetoIMDB/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TAP/projetoIMDB/src/app/master/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../TAP/projetoIMDB/src/app/master/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TAP/projetoIMDB/src/app/movie/movie.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../TAP/projetoIMDB/src/app/movie/movie.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TAP/projetoIMDB/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../TAP/projetoIMDB/src/app/pages/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TAP/projetoIMDB/src/app/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../TAP/projetoIMDB/src/app/pages/home/home.component.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +17,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
   <component name="ProjectId" id="2RU6B9uiVD5aXuDbkRe215v4Ka9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -19,7 +29,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/hugo1/Desktop/Programação/FronEnd-Cesae/ALG/IdeaProjects/Ficha3",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/hugol/Desktop/Programação/FrontEnd-Cesae/ALG/IdeaProjects/TP_POO_HugoLopes",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>

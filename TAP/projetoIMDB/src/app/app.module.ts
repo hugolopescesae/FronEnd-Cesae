@@ -23,6 +23,8 @@ import { NavbarComponent } from './master/navbar/navbar.component';
 import { FooterComponent } from './master/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CardComponent } from './components/card/card.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +54,8 @@ import { HttpClientModule } from '@angular/common/http';
     MdbTooltipModule,
     MdbValidationModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
