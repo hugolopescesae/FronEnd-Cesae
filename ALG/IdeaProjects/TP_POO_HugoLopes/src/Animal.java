@@ -4,7 +4,7 @@ public class Animal extends SerVivo{
     // Atributos do Animal
     private boolean fome;
     private double peso;
-    private double inteligencia;
+    private int inteligencia;
     private AlimentacaoAnimal alimentacao;
     private String barulho;
 
@@ -20,7 +20,7 @@ public class Animal extends SerVivo{
      * @param alimentacao
      * @param barulho
      */
-    public Animal(String nome, String especie, String pais, int idade, boolean fome, double peso, double inteligencia, AlimentacaoAnimal alimentacao, String barulho) {
+    public Animal(String nome, String especie, String pais, int idade, boolean fome, double peso, int inteligencia, AlimentacaoAnimal alimentacao, String barulho) {
         super(nome, especie, pais, idade);
 
         if (inteligencia < 0 || inteligencia > 100){ // Verificação da inteligência introduzida quando um Animal é instanciado
@@ -62,7 +62,7 @@ public class Animal extends SerVivo{
      * Função para obter a inteligência do Animal
      * @return inteligencia
      */
-    public double getInteligencia() {
+    public int getInteligencia() {
         return inteligencia;
     }
 
