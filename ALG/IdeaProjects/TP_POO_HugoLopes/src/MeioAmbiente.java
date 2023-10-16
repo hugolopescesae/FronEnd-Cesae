@@ -244,6 +244,84 @@ public class MeioAmbiente {
      * @param numDias
      */
     public void simulador(int numDias) {
+<<<<<<< Updated upstream
         
+=======
+        for (int i = 0; i < numDias;i++) { // Simular o número de dias
+            for (int j = 0;j < 3;j++) { // Simular os três momentos do dia (Manhã, Tarde e Noite)
+                // Guardar Animais num arrayAnimais
+                ArrayList<Animal> arrayAnimais = new ArrayList<Animal>();
+                for (SerVivo ser : this.seres) {
+                    if (ser instanceof Animal){
+                        arrayAnimais.add((Animal) ser);
+                    }
+                }
+
+                int randomAcontecimento = (int)(Math.random() * 4) + 1;
+                int randomNumber;
+
+                switch (randomAcontecimento) {
+                    case 1:
+                        int indexPlanta = (int)(Math.random() * this.seres.size());
+                        Planta planta = (Planta) this.seres.get(indexPlanta);
+
+                        if (planta.getFamilia() == FamiliaPlanta.COMEINSETOS){
+                            randomNumber = (int)(Math.random() * 3) + 1;
+                        }else{
+                            randomNumber = (int)(Math.random() * 2) + 1;
+                        }
+
+                        switch (randomNumber) {
+                            case 1:
+                                plantaAbanaComVento(indexPlanta);
+                            case 2:
+                                plantaBebe(indexPlanta);
+                            case 3:
+                                plantaComeInsetos(indexPlanta);
+                        }
+                        break;
+                    case 2:
+                        int indexAnimal = (int)(Math.random() * this.seres.size());
+                        Animal animal = (Animal) this.seres.get(indexAnimal);
+
+                        randomNumber = (int)(Math.random() * 4) + 1;
+
+                        switch (randomNumber) {
+                            case 1:
+                                animalFazBarulho(indexAnimal);
+                            case 2:
+                                animalMovimenta(indexAnimal);
+                            case 3:
+                                animalBebe(indexAnimal);
+                            case 4:
+                                animalCome(indexAnimal);
+                        }
+                        break;
+                    case 3:
+                        insetoChateia();
+                    case 4:
+                        randomNumber = (int)(Math.random() * 3) + 1;
+
+                        switch (randomNumber) {
+                            case 1:
+                                this.agua /= 2;
+                            case 2:
+                                this.agua *= 2;
+                            case 3:
+                                int qtdAnimais = 0;
+                                int qtdPlantas = 0;
+                                for (SerVivo ser : this.seres) {
+                                    if (ser instanceof Animal) {
+                                        qtdAnimais++;
+                                    }else if (ser instanceof Planta){
+                                        qtdPlantas++;
+                                    }
+                                }
+                                
+                        }
+                }
+            }
+        }
+>>>>>>> Stashed changes
     }
 }
