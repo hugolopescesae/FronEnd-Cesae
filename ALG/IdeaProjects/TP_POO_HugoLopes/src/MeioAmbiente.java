@@ -244,9 +244,6 @@ public class MeioAmbiente {
      * @param numDias
      */
     public void simulador(int numDias) {
-<<<<<<< Updated upstream
-        
-=======
         for (int i = 0; i < numDias;i++) { // Simular o número de dias
             for (int j = 0;j < 3;j++) { // Simular os três momentos do dia (Manhã, Tarde e Noite)
                 // Guardar Animais num arrayAnimais
@@ -322,6 +319,5 @@ public class MeioAmbiente {
                 }
             }
         }
->>>>>>> Stashed changes
     }
 }
