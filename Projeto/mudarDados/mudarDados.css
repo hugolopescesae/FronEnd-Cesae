@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: #4B4E6D;
+    --main-color2: #84DCC6;
+    --btn-hover: #84DCC6;
+    --shadow-hover: #4b4e6d76;
+    --shadow-hover2: #97e8d4dc;
+}
+
+.formulario-mudarDados {
+    width: 50%;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: auto;
+    flex-direction: row;
+}
+
+.formulario-mudarDados .line {
+    border: 1px solid var(--main-color);
+    width: 1px;
+    height: 80%;
+}
+
+.formulario-mudarDados label,
+h2,
+h3,
+h5 {
+    color: var(--main-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-group.form-margin .form-radio label {
+    color: black;
+    font-weight: normal;
+}
+
+.formulario-mudarDados .form-margin {
+    margin: 10px 0 10px 0;
+}
+
+.formulario-mudarDados button {
+    border-radius: 5px;
+    border: none;
+    color: var(--main-color2);
+    background-color: var(--main-color);
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+}
+
+.formulario-mudarDados button:hover {
+    color: var(--main-color);
+    background-color: var(--main-color2);
+    transition: all 0.2s;
+}
+
+.formulario-mudarDados input:focus {
+    border-color: white;
+    box-shadow: 1px 1px 5px 1px var(--main-color);
+}
+
+.formulario-mudarDados .buttonSubmit, .formulario-mudarDados{
+    display: flex;
+    justify-content: center;
+}
+
+input[type=radio]:checked {
+    background-color: var(--main-color2);
+    border: none;
+}
+
+.formulario-mudarDados .perfil {
+    text-align: center;
+}
+.formulario-mudarDados .perfil img {
+    background-color: #84DCC6;
+    width: 200px;
+    height: 200px;
+}
+
+@media (max-width: 1400px) {
+    .formulario-mudarDados {
+        display:grid;
+        flex-direction: column;
+    }
+
+    .formulario-mudarDados .line {
+        border: 1px solid var(--main-color);
+        width: 100%;
+        height: 1px;
+    }
+
+    .formulario-mudarDados .perfil img {
+        background-color: #84DCC6;
+        width: 300px;
+        height: 300px;
+    }
+}

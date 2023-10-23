@@ -25,6 +25,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './components/card/card.component';
 import { FormsModule } from '@angular/forms';
+import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     HomeComponent,
     CardComponent,
+    MovieDetailsComponent,
   ],
   imports: [
     BrowserModule,

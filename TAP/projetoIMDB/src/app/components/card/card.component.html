@@ -9,7 +9,10 @@
     </div>
 
     <div class="row">
-        <h1>Movies: </h1>
+        <div class="col-12 mb-3" *ngIf="!isMovieFound">
+            <h1 class="text-center">No Movies Found</h1>
+        </div>
+
         <div class="col-3 mb-3" *ngFor="let movie of movies">
             <div class="card">
                 <img [src]="movie.Poster" class="card-img-top" alt="Movie" />

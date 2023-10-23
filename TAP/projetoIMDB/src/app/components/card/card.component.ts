@@ -7,9 +7,11 @@ import { MovieService } from 'src/app/movie/movie.service';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
+
 export class CardComponent implements OnInit {
   movies: Movie[] = [];
   searchMovie: string = "";
+  isMovieFound: boolean = false;
 
   constructor(private movieService: MovieService) {}
 
@@ -20,8 +22,8 @@ export class CardComponent implements OnInit {
   getMovieByTitle(page: number = 1):void {
     this.movieService.getMovieByTitle(this.searchMovie, page)
     .subscribe((movieSearchResponse: MovieSearchResponse): void => {
-      console.log(movieSearchResponse.Search)
       this.movies = movieSearchResponse.Search;
+      this.isMovieFound = movieSearchResponse.Response === 'True'
     })
   }
 }

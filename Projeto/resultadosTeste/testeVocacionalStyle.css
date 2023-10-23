@@ -11,9 +11,17 @@
     --shadow-hover2: #97e8d4dc;
 }
 
+.container {
+    text-align: center;
+}
+
+.container h1 {
+    color: var(--main-color);
+}
+
 .card-container {
     width: 326, 25px;
-    height: 350px;
+    height: 400px;
     position: relative;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -45,6 +53,7 @@
     -webkit-text-fill-color: transparent;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
     text-align: center;
+    padding: 20px 20px;
 }
 
 .card .content {
@@ -70,7 +79,7 @@
 }
 
 .card .content .heading {
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 700;
 }
 
