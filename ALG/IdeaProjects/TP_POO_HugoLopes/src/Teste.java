@@ -3,7 +3,6 @@ import Enums.FamiliaPlanta;
 
 public class Teste {
     public static void main(String[] args) {
-
         // Instância de Plantas
         Planta planta1 = new Planta("Rosa","Rosa indica","Brasil",2,FamiliaPlanta.ARVORES,4);
         Planta planta2 = new Planta("Pinheiro","Pinus sylvestris","Canadá",15,FamiliaPlanta.ARVORES,3);
