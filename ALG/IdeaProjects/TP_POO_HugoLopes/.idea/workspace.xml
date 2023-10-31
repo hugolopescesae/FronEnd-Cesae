@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9b0b8aaf-367c-4d49-96ac-e1360dd82b5c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MeioAmbiente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MeioAmbiente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.tools&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -75,6 +74,11 @@
       <workItem from="1696425550645" duration="6694000" />
       <workItem from="1696432943454" duration="77000" />
       <workItem from="1696940100148" duration="73000" />
+      <workItem from="1698243250690" duration="183000" />
+      <workItem from="1698243444250" duration="127000" />
+      <workItem from="1698243579592" duration="886000" />
+      <workItem from="1698745731160" duration="58000" />
+      <workItem from="1698745796712" duration="17000" />
     </task>
     <servers />
   </component>
@@ -84,5 +88,9 @@
   <component name="UnknownFeatures">
     <option featureType="dependencySupport" implementationName="executable:docker" />
     <option featureType="dependencySupport" implementationName="executable:kubectl" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
