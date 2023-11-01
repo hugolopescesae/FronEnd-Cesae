@@ -28,7 +28,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     HomePageComponent,
-    CurrencyComponent
+    CurrencyComponent,
   ],
   imports: [
     BrowserModule,
