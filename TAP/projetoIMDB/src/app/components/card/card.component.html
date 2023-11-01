@@ -21,6 +21,7 @@
                     <p class="card-text">Tipo: {{ movie.Type }}</p>
                     <p class="card-text">Ano: {{ movie.Year }}</p>
                     <p class="card-text">imdbID: {{ movie.imdbID }}</p>
+                    <p [routerLink]="movie.imdbID" class="btn btn-primary">Open</p>
                 </div>
             </div>
         </div>

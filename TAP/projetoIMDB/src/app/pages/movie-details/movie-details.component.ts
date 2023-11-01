@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { MovieDetails } from 'src/app/models/movie.model';
 import { MovieService } from 'src/app/movie/movie.service';
 
@@ -8,6 +9,7 @@ import { MovieService } from 'src/app/movie/movie.service';
   styleUrls: ['./movie-details.component.scss']
 })
 export class MovieDetailsComponent implements OnInit {
+  id: string = ""
   movie: MovieDetails = {
     Title: '',
     Year: '',
@@ -36,14 +38,15 @@ export class MovieDetailsComponent implements OnInit {
     Response: ''
   };
 
-  constructor(private movieService: MovieService) {}
+  constructor(private movieService: MovieService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.id = this.route.snapshot.paramMap.get("id") || "";
     this.getMovieById();
   }
 
   getMovieById(): void {
-    this.movieService.getMovieById("tt0099785")
+    this.movieService.getMovieById(this.id)
     .subscribe((movieDetails: MovieDetails): void => {
       this.movie = movieDetails;
     })

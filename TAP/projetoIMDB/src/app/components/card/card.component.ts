@@ -23,6 +23,7 @@ export class CardComponent implements OnInit {
     this.movieService.getMovieByTitle(this.searchMovie, page)
     .subscribe((movieSearchResponse: MovieSearchResponse): void => {
       this.movies = movieSearchResponse.Search;
+      console.log(this.movies)
       this.isMovieFound = movieSearchResponse.Response === 'True'
     })
   }

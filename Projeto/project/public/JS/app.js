@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
             questaoDiv.innerText = "";
         }
     };
-
+    
     const nextStep = () => {
         if (currentStep < totalPerguntas - 1) {
             currentStep++;
@@ -81,7 +81,27 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
+    const animationOverlay = document.querySelector('.animation-overlay');
+    const showAnimationButton = document.querySelector('.show-animation-button');
 
+    let questionCount = 1;
+
+    function showAnimation() {
+        animationOverlay.classList.add('show-animation');
+        setTimeout(() => {
+            animationOverlay.classList.remove('show-animation');
+            questionCount++;
+            if (questionCount <= 20) {
+                // Mostrar a próxima pergunta
+                const questionContainer = document.querySelector('.container');
+                questionContainer.innerHTML = `<h1>Pergunta ${questionCount}</h1>`;
+            } else {
+                // Fim do teste vocacional
+            }
+        }, 3000); // A animação será exibida por 3 segundos (ajuste conforme necessário)
+    }
+
+    showAnimationButton.addEventListener('click', showAnimation);
 
     const nextButtons = document.querySelectorAll(".next");
     const previousButtons = document.querySelectorAll(".previous");

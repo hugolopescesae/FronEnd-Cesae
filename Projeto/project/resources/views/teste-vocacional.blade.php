@@ -13,6 +13,11 @@
             @foreach ($perguntas as $index => $pergunta)
                 <div class="form-section">
                     <p class="teste-feedback"></p>
+                    <div class="animation-overlay">
+                        <div class="animation-content">
+                            <p>Texto da animação...</p>
+                        </div>
+                    </div>
                     <div class="pergunta" data-pergunta-id="{{ $pergunta->id }}" data-step="{{ $index }}">
                         <div class="questao">
                             <p>{{ $pergunta->questao }}</p>

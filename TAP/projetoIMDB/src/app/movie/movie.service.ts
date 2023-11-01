@@ -11,7 +11,7 @@ export class MovieService {
 
   private domain: string = "https://www.omdbapi.com" // OMDB Domain
   private apikey: string = "8b7fe278" // Auth Key OMDB
-  private id: string = "tt0099785"
+  private id: string = ""
 
   constructor(private http: HttpClient) { }
 
