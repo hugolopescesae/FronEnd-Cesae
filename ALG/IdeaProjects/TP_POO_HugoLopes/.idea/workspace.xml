@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b0b8aaf-367c-4d49-96ac-e1360dd82b5c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../EWEB/wp_passes/wp_passes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../EWEB/wp_passes/wp_passes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TAP/CurrencyConverter/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TAP/CurrencyConverter/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TAP/CurrencyConverter/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TAP/CurrencyConverter/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TAP/CurrencyConverter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TAP/CurrencyConverter/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TAP/projetoIMDB/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TAP/projetoIMDB/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TAP/projetoIMDB/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../TAP/projetoIMDB/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +86,7 @@
       <workItem from="1698745796712" duration="17000" />
       <workItem from="1698758778356" duration="208000" />
       <workItem from="1698758997393" duration="363000" />
+      <workItem from="1698921570736" duration="31000" />
     </task>
     <servers />
   </component>
