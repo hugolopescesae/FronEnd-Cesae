@@ -74,6 +74,7 @@ public class Teste {
         meioAmbiente.addSerVivo(inseto9);
         meioAmbiente.addSerVivo(inseto10);
 
-        meioAmbiente.simulador(10);
+
+        meioAmbiente.simulador(50);
     }
 }

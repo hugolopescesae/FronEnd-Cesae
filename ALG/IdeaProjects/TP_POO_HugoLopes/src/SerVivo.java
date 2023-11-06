@@ -55,7 +55,6 @@ public class SerVivo {
      * Função para imprimir todos os detalhes do SerVivo
      */
     public void imprimirDetalhesSerVivo() {
-        System.out.println("Detalhes SerVivo:");
         System.out.println("Nome: "+this.nome);
         System.out.println("Espécie: "+this.especie);
         System.out.println("País: "+this.pais);

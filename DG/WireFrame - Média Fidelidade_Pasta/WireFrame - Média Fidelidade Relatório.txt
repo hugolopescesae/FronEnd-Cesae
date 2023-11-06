@@ -1,0 +1,55 @@
+Relatório de pacote
+
+-----------------------------------------------------------------------------
+Documento:
+Nome: WireFrame - Média Fidelidade.ai
+Modo de cor: Cor RGB
+Perfil de cor: sRGB IEC61966-2.1
+Unidades da régua: pixels
+Dimensões da prancheta: 1920 px x 2561 px
+Mostrar imagens no modo de contorno: DESATIVADO
+Realçar fontes substituídas: DESATIVADO
+Realçar glifos substituídos: DESATIVADO
+Preservar capacidade de edição do texto
+Simular papel colorido: DESATIVADO
+
+-----------------------------------------------------------------------------
+Objetos de cor especial:
+
+-----------------------------------------------------------------------------
+Fontes ausentes:NENHUM
+
+-----------------------------------------------------------------------------
+Fontes protegidas que não foram empacotadas:NENHUM
+
+-----------------------------------------------------------------------------
+Fontes:
+Impact (OTF)
+
+-----------------------------------------------------------------------------
+Fontes incorporadas:
+NENHUM
+
+-----------------------------------------------------------------------------
+Vínculos ausentes:
+NENHUM
+
+-----------------------------------------------------------------------------
+Imagens vinculadas:
+
+C:\Users\hugol\Downloads\IMG_20231026_113849.jpg
+Tipo: RGB
+Bits por pixel: 24
+Canais: 3
+Tamanho: 35156K, 3000 por 4000 pixels
+Dimensões: 1920,75 por 2561 pontos 
+Resolução: 112,456 por 112,456 pixels por polegada
+
+
+C:\Users\hugol\Downloads\AlienwareBackground.jpg
+Tipo: RGB
+Bits por pixel: 24
+Canais: 3
+Tamanho: 27648K, 4096 por 2304 pixels
+Dimensões: 1368,889 por 770 pontos 
+Resolução: 215,439 por 215,439 pixels por polegada
